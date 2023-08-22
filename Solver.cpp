@@ -128,3 +128,4 @@ void solver(double *solutions, double a, double b, double c)
     }
 
 }
+
