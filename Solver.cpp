@@ -1,50 +1,7 @@
-//4. Добавить accert
-//5. Сделать документацию, doxygen
-//7. Более прикольный вывод
-
 #include <stdio.h>
 #include <math.h>
-
-//--------------------------------------------------------------------------------------
-//constants with define
-
-#define EPSILONE 1e-10      //invite epsilone near to 0 for comparing
-#define INF_SOLUTIONS -1    //constant of -1 for case [0 0 0]
-#define NAR 3               //Not a Root for some shit with amount of solutions
-
-//--------------------------------------------------------------------------------------
-//Structure for solutions
-
-struct solver_form          //structure form for solutions
-{
-    int amount;
-    double root1;
-    double root2;
-};
-
-//--------------------------------------------------------------------------------------
-//Initialization all Functions
-
-//1. Compare two double numbers
-int compare(double x, double y);
-
-//2. Function of enter one double parametr (with security of dumb)
-double enter(void);
-
-//3. Function of clean input of rubbish
-void clean(void);
-
-//4. Main function of square solver
-void qua_solver(solver_form *sols, double a, double b, double c);
-
-//5. Function of solving specific linal equations
-void lin_solver(solver_form *sols, double b, double c);
-
-//6. Function of processing solutions and output
-void process(solver_form *sols, int counter);
-
-//7. Function of checking for overflow numbers
-int check(double z);
+#include <assert.h>
+#include "allfunc.h" // HEADER with all func,const and struck
 
 //--------------------------------------------------------------------------------------
 //MAIN
@@ -53,13 +10,14 @@ int main(void)
 {
     //1. initialization all parametrs
 
-    double a = NAN;
-    double b = NAN;
-    double c = NAN;
+    double a = NAN, b = NAN, c = NAN;
 
     //2. Enter all data(with security)
 
-    printf("Enter parametrs(numbers) of quadratic equation: ax^2 + bx + c = 0.\n");
+    printf("    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
+           "----------------------------------------------------------------------------------------------------\n");
+    printf("Enter parametrs(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
+            "       Please enter only normal double numbers!!!\n");
 
     a = enter();
     b = enter();
@@ -67,15 +25,23 @@ int main(void)
 
     //3. Processing qua_solver
 
-    struct solver_form solutions = {    // initialization struct for form of solutions
+    struct Roots solutions = {    // initialization struct for form of solutions
         NAR,
         NAN,
         NAN,
     };
 
+    assert(isnan(a) || isfinite(a));
+    assert(isnan(b) || isfinite(b));
+    assert(isnan(c) || isfinite(c));
+
     qua_solver(&solutions,a,b,c);  //call quadratic solver
 
     int counter = (int)solutions.amount; // initialization amount of solutions
+
+    assert(isnan(solutions.amount) || isfinite(solutions.amount));
+    assert(isnan(solutions.root1) || isfinite(solutions.root1));
+    assert(isnan(solutions.root2) || isfinite(solutions.root2));
 
     process(&solutions, counter);  //call function of output
 
@@ -109,13 +75,13 @@ double enter(void)
     while((scanf("%lf",&h) != 1) || check(h))   //realization of security with char and biggest numbers
     {
         clean();
-        printf("\nWtf? Its not number. Another attemp you piece of shit!\n");
+        printf("\nWtf? Its not double number. Another attemp you piece of shit!\n");
     }
     return h;
 }
 
 //4.
-void qua_solver(solver_form *sols, double a, double b, double c)
+void qua_solver(Roots *sols, double a, double b, double c)
 {
     double x1 = NAN;
     double x2 = NAN;
@@ -151,13 +117,14 @@ void qua_solver(solver_form *sols, double a, double b, double c)
 }
 
 //5.
-void lin_solver(solver_form *sols, double b, double c)
+void lin_solver(Roots *sols, double b, double c)
 {
+    double x1 = NAN;
     if(compare(b,0))
     {
         if(compare(c,0))
         {
-            sols -> amount = INF_SOLUTIONS;
+            sols -> amount = -1;
         }
         else
         {
@@ -167,29 +134,32 @@ void lin_solver(solver_form *sols, double b, double c)
     else
     {
         sols -> amount = 1;
-        sols -> root1 = -(c/b);
+        x1 = c/b;
+        if (compare(x1,0)) sols -> root1 = fabs(-(c/b));
+        else sols -> root1 = -(c/b);
+
     }
 }
 
 //6.
-void process(solver_form *sols, int counter)
+void process(Roots *sols, int counter)
 {
     switch(counter)
     {
-        case INF_SOLUTIONS:
+        case INF_SOL:
             printf("Infinity of solutions. a = b = c = 0");
             break;
-        case 0:
+        case ZERO_SOL:
             printf("No solutions.");
             break;
-        case 1:
+        case ONE_SOL:
             printf("One solution. x = %lf", sols->root1);
             break;
-        case 2:
+        case TWO_SOL:
             printf("Two solutions.\nx1 = %lf\nx2 = %lf",(*sols).root1,(*sols).root2);
             break;
         default:
-            printf("You have some shit and problems in logic");
+            printf("ERROR PROBLEMS IN LOGIC. COUNTER NOT NORMAL");
     }
 }
 
@@ -198,3 +168,4 @@ int check(double z)
 {
     return !(isnan(z) || isfinite(z));
 }
+
