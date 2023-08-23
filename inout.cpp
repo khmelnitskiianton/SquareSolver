@@ -6,57 +6,99 @@
 */
 
 //3.
-void clean(void)
+void clean_buffer (void)
 {
     int ch = 0;                         //its char, but i use it only for input/output
-    while((ch = getchar()) != '\n')     // all rubbish in input line would take
-        putchar(ch);
+    while((ch = getchar ()) != '\n')     // all rubbish in input line would take
+        putchar (ch);
 }
 
 //4.
-double enter_d(void)
+double enter_double (void)
 {
-    double h = NAN;
-    while((scanf("%lf",&h) != 1) || !(check(h)))   //realization of security with char and biggest numbers
+    double num = NAN;
+    while((scanf ("%lf", &num) != 1) || !(check_double (num)))   //realization of security with char and biggest numbers
     {
-        clean();
-        printf("\nWtf? Its not double number. Another attemp you piece of shit!\n");
+        clean_buffer ();
+        printf ("\nWtf? Its not double number. Maybe it is a single number. Another attempt you piece of shit, hey you, MAAAAN!\n");
     }
-    return h;
+    return num;
 }
 
 //5.
-void input_argu(double *argu)
+void input_args (double *args)
 {
-    int counter = 0;
+    int amount = 0;
     for(int i = 0; i < QUANTITY; i++)
     {
-        argu[i] = enter_d();
-        counter += 1;
-        if (counter == 1) printf("You enter a = %lf !\n", argu[0]);
-        if (counter == 2) printf("Now you enter a = %.2lf and b = %.2lf !!\n", argu[0], argu[1]);
-        if (counter == 3) printf("Super, you enter a = %.2lf and b = %.2lf and c = %.2lf !!!\n", argu[0], argu[1], argu[2]);
+        args[i] = enter_double ();
+        amount += 1;
+        if (amount == 1) printf ("You enter a = %.2lf !\n", args[0]);
+        if (amount == 2) printf ("Now you enter a = %.2lf and b = %.2lf !!\n", args[0], args[1]);
+        if (amount == 3) printf ("Super, you enter a = %.2lf and b = %.2lf and c = %.2lf !!!\n", args[0], args[1], args[2]);
     }
 }
 
 //6.
-void process_out(Roots *sols, int counter)
+void process_out (Roots *sols, int counter)
 {
-    switch(counter)
+    switch (counter)
     {
         case INF_SOL:
-            printf("Infinity of solutions. a = b = c = 0");
+            printf ("Infinity of solutions. a = b = c = 0");
             break;
+
         case ZERO_SOL:
-            printf("No solutions.");
+            printf ("No solutions.");
             break;
+
         case ONE_SOL:
-            printf("One solution. x = %lf", sols->root1);
+            printf ("One solution. x = %lf", sols -> root1);
             break;
+
         case TWO_SOL:
-            printf("Two solutions.\nx1 = %lf\nx2 = %lf",(*sols).root1,(*sols).root2);
+            printf ("Two solutions.\nx1 = %lf\nx2 = %lf", (*sols).root1, (*sols).root2);
             break;
+
         default:
-            printf("ERROR PROBLEMS IN LOGIC. AMOUNT NOT NORMAL");
+            printf ("ERROR PROBLEMS IN LOGIC. YOUR LOGIC. CHECK UR BRAINS. AMOUNT NOT NORMAL");
+    }
+}
+
+//11.
+int welcome (void)
+{
+    int ch = 0;
+
+    printf ("    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
+           "----------------------------------------------------------------------------------\n");
+    printf ("Enter arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
+            "   Please enter only normal double numbers!!!\n");
+    printf ("    YOU WANT TO USE AUTO TESTING ???\n"
+           "    Enter Y or N\n");
+
+    ch = getchar ();
+    clean_buffer ();
+    if (toupper (ch) == 'Y') test_all ();
+
+    printf ("Do you want to continue use this program ??? Enter Y or N\n");
+
+    ch = getchar ();
+    clean_buffer ();
+
+    if (toupper (ch) == 'Y')
+    {
+        printf("NOW enter 3 arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
+               "    After every number press enter/tab/space!\n");
+        return 0;    
+    }
+    else return 1;
+}
+//12.
+void filler_coeffs(double *args)
+{
+    for(int i = 0; i < QUANTITY; i++)               //initialization of array
+    {
+        args[i] = NAN;
     }
 }
