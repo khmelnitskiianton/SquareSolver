@@ -1,0 +1,20 @@
+#include "allfunc.h"
+
+//1. Compare two double numbers and 2. Function of checking for overflow numbers
+
+//1.
+int compare(double x, double y)
+{
+    if ((isnan(x) == 1)&&(isnan(y) == 1))
+        return 1;
+    if (fabs(x - y) < EPSILONE)         //with help of epsilone equal to ==
+        return 1;
+    else
+        return 0;
+}
+
+//2.
+int check(double z)
+{
+    return (isnan(z) || isfinite(z));
+}
