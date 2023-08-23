@@ -1,49 +1,53 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
-#include "allfunc.h" // HEADER with all func,const and struck
+#include "allfunc.h"                    // HEADER with all func,const and struck
+
 
 //--------------------------------------------------------------------------------------
 //MAIN
 
-int main(void)
+int main()
 {
     //1. initialization all parametrs
 
-    double a = NAN, b = NAN, c = NAN;
+    double coeffs[QUANTITY];            // array of coeffs
 
-    //2. Enter all data(with security)
+    for(int i = 0; i < QUANTITY; i++)   //initialization of array
+    {
+        coeffs[i] = NAN;
+    }
 
-    printf("    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
-           "----------------------------------------------------------------------------------------------------\n");
-    printf("Enter parametrs(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
-            "       Please enter only normal double numbers!!!\n");
-
-    a = enter();
-    b = enter();
-    c = enter();
-
-    //3. Processing qua_solver
-
-    struct Roots solutions = {    // initialization struct for form of solutions
+    struct Roots solutions = {          // initialization struct for form of solutions
         NAR,
         NAN,
         NAN,
     };
 
-    assert(isnan(a) || isfinite(a));
-    assert(isnan(b) || isfinite(b));
-    assert(isnan(c) || isfinite(c));
+    //2. enter all data(with security)
 
-    qua_solver(&solutions,a,b,c);  //call quadratic solver
+    printf("    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
+           "----------------------------------------------------------------------------------\n");
+    printf("Enter arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
+            "       Please enter_d only normal double numbers!!!\n");
 
-    int counter = (int)solutions.amount; // initialization amount of solutions
+    input_argu(coeffs);                    //enter all parametrs with security
 
-    assert(isnan(solutions.amount) || isfinite(solutions.amount));
-    assert(isnan(solutions.root1) || isfinite(solutions.root1));
-    assert(isnan(solutions.root2) || isfinite(solutions.root2));
+    //3. Processing q_solver
 
-    process(&solutions, counter);  //call function of output
+    assert(check(coeffs[0]));              //Checking for errors
+    assert(check(coeffs[1]));
+    assert(check(coeffs[2]));
+
+    q_solver(&solutions,coeffs);           //call quadratic solver
+
+    int counter = (int)solutions.amount;   // initialization amount of solutions
+
+    assert(check(solutions.amount));       //Checking for errors
+    assert(check(solutions.root1));
+    assert(check(solutions.root2));
+
+    process_out(&solutions, counter);      //call function of output
 
     return 0;
 }
@@ -54,7 +58,7 @@ int main(void)
 //1.
 int compare(double x, double y)
 {
-    if (fabs(x - y) < EPSILONE)   //with help of epsilone equal to ==
+    if (fabs(x - y) < EPSILONE)         //with help of epsilone equal to ==
         return 1;
     else
         return 0;
@@ -63,16 +67,16 @@ int compare(double x, double y)
 //2.
 void clean(void)
 {
-    int ch = 0; //its char, but i use it only for input/output
-    while((ch = getchar()) != '\n')   // all rubbish in input line would take
+    int ch = 0;                         //its char, but i use it only for input/output
+    while((ch = getchar()) != '\n')     // all rubbish in input line would take
         putchar(ch);
 }
 
 //3.
-double enter(void)
+double enter_d(void)
 {
     double h = NAN;
-    while((scanf("%lf",&h) != 1) || check(h))   //realization of security with char and biggest numbers
+    while((scanf("%lf",&h) != 1) || !(check(h)))   //realization of security with char and biggest numbers
     {
         clean();
         printf("\nWtf? Its not double number. Another attemp you piece of shit!\n");
@@ -81,30 +85,30 @@ double enter(void)
 }
 
 //4.
-void qua_solver(Roots *sols, double a, double b, double c)
+void q_solver(Roots *sols, double *argu)
 {
     double x1 = NAN;
     double x2 = NAN;
     double d = NAN;
 
-    if(compare(a,0))
+    if(compare(argu[0],0))
     {
-        lin_solver(sols,b,c);
+        l_solver(sols,argu);
     }
     else
     {
-        d = b * b - 4 * a * c;
+        d = argu[1] * argu[1] - 4 * argu[0] * argu[2];
         if(d > 0)
         {
-            x1 = (- b + sqrt(d)) / (2 * a);
-            x2 = (- b - sqrt(d)) / (2 * a);
+            x1 = (- argu[1] + sqrt(d)) / (2 * argu[0]);
+            x2 = (- argu[1] - sqrt(d)) / (2 * argu[0]);
             sols -> amount = 2;
             sols -> root1 = x1;
             sols -> root2 = x2;
         }
         else if(compare(d,0))
         {
-            x1 = - b / (2 * a);
+            x1 = - argu[1] / (2 * argu[0]);
             sols -> amount = 1;
             sols -> root1 = x1;
         }
@@ -117,12 +121,12 @@ void qua_solver(Roots *sols, double a, double b, double c)
 }
 
 //5.
-void lin_solver(Roots *sols, double b, double c)
+void l_solver(Roots *sols, double *argu)
 {
     double x1 = NAN;
-    if(compare(b,0))
+    if(compare(argu[1],0))
     {
-        if(compare(c,0))
+        if(compare(argu[2],0))
         {
             sols -> amount = -1;
         }
@@ -134,15 +138,14 @@ void lin_solver(Roots *sols, double b, double c)
     else
     {
         sols -> amount = 1;
-        x1 = c/b;
-        if (compare(x1,0)) sols -> root1 = fabs(-(c/b));
-        else sols -> root1 = -(c/b);
-
+        x1 = argu[2] / argu[1];
+        if (compare(x1,0)) sols -> root1 = fabs(-(argu[2] / argu[1]));
+        else sols -> root1 = -(argu[2] / argu[1]);
     }
 }
 
 //6.
-void process(Roots *sols, int counter)
+void process_out(Roots *sols, int counter)
 {
     switch(counter)
     {
@@ -166,6 +169,14 @@ void process(Roots *sols, int counter)
 //7.
 int check(double z)
 {
-    return !(isnan(z) || isfinite(z));
+    return (isnan(z) || isfinite(z));
 }
 
+//8.
+void input_argu(double *argu)
+{
+    for(int i = 0; i < QUANTITY; i++)
+    {
+        argu[i] = enter_d();
+    }
+}
