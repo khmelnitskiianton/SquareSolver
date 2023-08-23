@@ -2,7 +2,7 @@
 #include <math.h>
 #include <assert.h>
 #include "allfunc.h"                    // HEADER with all func,const and struck
-
+#include "mytest.h"
 
 //--------------------------------------------------------------------------------------
 //MAIN
@@ -10,6 +10,7 @@
 int main()
 {
     //1. initialization all parametrs
+    char ch = 'a';
 
     double coeffs[QUANTITY];            // array of coeffs
 
@@ -29,7 +30,15 @@ int main()
     printf("    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
            "----------------------------------------------------------------------------------\n");
     printf("Enter arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
-            "       Please enter_d only normal double numbers!!!\n");
+            "       Please enter only normal double numbers!!!\n");
+    printf("    YOU WANT TO USE AUTO TESTING ???\n"
+        "   Enter Y or N\n");
+
+    scanf("%c", &ch);
+
+    if (ch == 'y' or ch == 'Y') test_all();
+
+    printf("  NOW TIME TO HAND ENTER !!!\n");
 
     input_argu(coeffs);                    //enter all parametrs with security
 
@@ -58,6 +67,8 @@ int main()
 //1.
 int compare(double x, double y)
 {
+    if ((isnan(x) == 1)&&(isnan(y) == 1))
+        return 1;
     if (fabs(x - y) < EPSILONE)         //with help of epsilone equal to ==
         return 1;
     else
@@ -162,7 +173,7 @@ void process_out(Roots *sols, int counter)
             printf("Two solutions.\nx1 = %lf\nx2 = %lf",(*sols).root1,(*sols).root2);
             break;
         default:
-            printf("ERROR PROBLEMS IN LOGIC. COUNTER NOT NORMAL");
+            printf("ERROR PROBLEMS IN LOGIC. AMOUNT NOT NORMAL");
     }
 }
 
