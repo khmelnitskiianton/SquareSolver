@@ -21,7 +21,7 @@ int main()
     assert(check_double(coeffs[1]));
     assert(check_double(coeffs[2]));
     
-    //3. Processing q_solver
+    //3. Processing quadratic solver
 
     quadratic_solver(&solutions,coeffs);            //call quadratic solver
 
