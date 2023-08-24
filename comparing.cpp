@@ -18,3 +18,11 @@ int check_double (double z)
 {
     return (isnan (z) || isfinite (z));
 }
+
+//16.
+double nan_file(char stroka[])
+{   
+    char * end;
+    if (!(strcmp (stroka, "NAN")) || !(strcmp (stroka, "nan")) || !(strcmp (stroka, "N")) || !(strcmp (stroka, "n")) ) return NAN;
+    else return strtod (stroka, &end);
+}
