@@ -1,4 +1,4 @@
-#include "allfunc.h"
+#include "head.h"
 
 int test_solofile(int *n, double mass[], int amount_cor)
 {   

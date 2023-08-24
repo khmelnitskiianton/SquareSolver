@@ -1,4 +1,4 @@
-#include "allfunc.h"                                // HEADER with all func,const and struck
+#include "head.h"                                // HEADER with all func,const and struck
 
 int main()
 {   

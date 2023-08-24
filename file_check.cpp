@@ -1,4 +1,4 @@
-#include "allfunc.h"
+#include "head.h"
 
 FILE * openfile (void)
 {

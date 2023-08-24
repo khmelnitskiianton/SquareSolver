@@ -1,4 +1,4 @@
-#include "allfunc.h"
+#include "head.h"
 
 //7.
 void quadratic_solver (Roots *sols, double *args)

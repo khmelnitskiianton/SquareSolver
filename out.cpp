@@ -1,4 +1,4 @@
-#include "allfunc.h"
+#include "head.h"
 
 void process_out (Roots *sols, int counter)
 {

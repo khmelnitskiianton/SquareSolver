@@ -1,4 +1,4 @@
-#include "allfunc.h"
+#include "head.h"
 
 //3.
 void clean_buffer (void)
@@ -39,18 +39,19 @@ int welcome (void)
 {
     int ch = 0;
 
-    printf ("\033[1;%dm    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
+    printf ("\n\033[1;%dm    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
            "----------------------------------------------------------------------------------\033[1;%dm\n", MAGENTA, RESET);
-    printf ("\033[1;%dmEnter arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
+    printf ("\n\033[1;%dmEnter arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
             "   Please enter only normal double numbers!!!\033[1;%dm\n", CYAN, RESET);
-    printf ("\033[1;%dm    YOU WANT TO USE AUTO TESTING ???\n"
-           "    Enter Y or N\033[1;%dm\n", YELLOW, RESET);
+    printf ("\n\033[1;%dm    YOU WANT TO USE AUTO TESTING ???\n"
+           "        Enter Y or N\033[1;%dm\n            ", YELLOW, RESET);
 
     ch = getchar ();
     clean_buffer ();
     if (toupper (ch) == 'Y') test_allfile ();
 
-    printf ("\033[1;%dm    Do you want to continue use this program ??? \n    Enter Y or N \033[1;%dm\n", YELLOW, RESET);
+    printf ("\033[1;%dm    Do you want to continue use this program ??? \n    "
+        "   Enter Y or N \033[1;%dm\n           ", YELLOW, RESET);
 
     ch = getchar ();
     clean_buffer ();

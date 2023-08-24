@@ -1,4 +1,4 @@
-#include "allfunc.h"
+#include "head.h"
 
 //1.
 int compare (double x, double y)

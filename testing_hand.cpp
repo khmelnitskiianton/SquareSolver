@@ -1,4 +1,4 @@
-#include "allfunc.h"
+#include "head.h"
 
 //9. Function of making one test and 10. Function of all tests(many solo)
 
