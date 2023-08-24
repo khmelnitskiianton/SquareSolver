@@ -1,9 +1,7 @@
 #include "allfunc.h"
 
-//7. Main function of Quadratic solver and 8. Function of solving specific Linal equations
-
 //7.
-void quadratic_solver(Roots *sols, double *args)
+void quadratic_solver (Roots *sols, double *args)
 {
     double x1 = NAN;
     double x2 = NAN;
@@ -41,12 +39,12 @@ void quadratic_solver(Roots *sols, double *args)
 }
 
 //8.
-void linal_solver(Roots *sols, double *argu)
+void linal_solver (Roots *sols, double *args)
 {
     double x1 = NAN;
-    if (compare(argu[1], 0))
+    if (compare (args[1], 0))
     {
-        if (compare(argu[2], 0))
+        if (compare (args[2], 0))
         {
             sols -> amount = -1;
         }
@@ -58,8 +56,8 @@ void linal_solver(Roots *sols, double *argu)
     else
     {
         sols -> amount = 1;
-        x1 = - argu[2] / argu[1];
-        if (compare(x1, 0)) sols -> root1 = fabs (x1);
+        x1 = - args[2] / args[1];
+        if (compare (x1, 0)) sols -> root1 = fabs (x1);
         else sols -> root1 = x1;
     }
 }
