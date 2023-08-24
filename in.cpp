@@ -39,26 +39,26 @@ int welcome (void)
 {
     int ch = 0;
 
-    printf ("\033[1;35m    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
-           "----------------------------------------------------------------------------------\033[1;0m\n");
-    printf ("\033[1;36mEnter arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
-            "   Please enter only normal double numbers!!!\033[1;0m\n");
-    printf ("\033[1;33m    YOU WANT TO USE AUTO TESTING ???\n"
-           "    Enter Y or N\033[1;0m\n");
+    printf ("\033[1;%dm    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
+           "----------------------------------------------------------------------------------\033[1;%dm\n", MAGENTA, RESET);
+    printf ("\033[1;%dmEnter arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
+            "   Please enter only normal double numbers!!!\033[1;%dm\n", CYAN, RESET);
+    printf ("\033[1;%dm    YOU WANT TO USE AUTO TESTING ???\n"
+           "    Enter Y or N\033[1;%dm\n", YELLOW, RESET);
 
     ch = getchar ();
     clean_buffer ();
     if (toupper (ch) == 'Y') test_allfile ();
 
-    printf ("\033[1;33m    Do you want to continue use this program ??? \n    Enter Y or N \033[1;0m\n");
+    printf ("\033[1;%dm    Do you want to continue use this program ??? \n    Enter Y or N \033[1;%dm\n", YELLOW, RESET);
 
     ch = getchar ();
     clean_buffer ();
 
     if (toupper (ch) == 'Y')
     {
-        printf ("\033[1;32mNOW enter 3 arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
-               "    After every number press enter/tab/space!\033[1;0m\n");
+        printf ("\033[1;%dmNOW enter 3 arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
+               "    After every number press enter/tab/space!\033[1;%dm\n", GREEN, RESET);
         return 0;    
     }
     else return 1;
