@@ -1,0 +1,5 @@
+4
+1 2 1 -1 NAN 1
+1 -6 9 3 NAN 1
+1 0 1 NAN NAN 0
+0 0 0 NAN NAN -1
