@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MYASSERT(condition) if (condition) printf("ERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s() , LINE %d \n", __FILE__, __func__, __LINE__);
+#define MYASSERT(condition) if (!condition) printf("\033[1;31mERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s , LINE %d\033[1;0m\n", __FILE__, __PRETTY_FUNCTION__, __LINE__)
 
 //--------------------------------------------------------------------------------------
 //constants with define and enum
