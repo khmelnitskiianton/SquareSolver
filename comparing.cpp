@@ -1,7 +1,5 @@
 #include "allfunc.h"
 
-//1. Compare two double numbers and 2. Function of checking for overflow numbers
-
 //1.
 int compare (double x, double y)
 {
@@ -22,7 +20,7 @@ int check_double (double z)
 //16.
 double nan_file (char stroka[])
 {   
-    char * end;
+    char *end;
     if (!(strcmp (stroka, "NAN")) || !(strcmp (stroka, "nan")) || !(strcmp (stroka, "N")) || !(strcmp (stroka, "n")) ) return NAN;
     else return strtod (stroka, &end);
 }
