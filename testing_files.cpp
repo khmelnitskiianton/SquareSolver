@@ -1,6 +1,5 @@
 #include "allfunc.h"
 
-//13.
 int test_solofile(int *n, double mass[], int amount_cor)
 {
     double a = mass[0];
@@ -10,7 +9,7 @@ int test_solofile(int *n, double mass[], int amount_cor)
     double x2_cor = mass[4];
 
     struct Roots decisions = {                  // initialization struct and array
-        NAR,
+        UNDEFINED_SOL,
         NAN,
         NAN,
     };
@@ -21,13 +20,13 @@ int test_solofile(int *n, double mass[], int amount_cor)
 
     if (!(compare (decisions.root1, x1_cor) || compare (decisions.root1, x2_cor)) || !(compare (decisions.root2, x2_cor) || compare (decisions.root2, x1_cor)) || !compare (decisions.amount, amount_cor) )
     {
-        printf("TEST %d FAILED: x1 = %lf , x2 = %lf , amount = %d."
+        printf("\033[1;31mTEST %d WITH DATA: [a=%.1lf, b=%.1lf, c=%.1lf] IS FAILED: x1 = %lf , x2 = %lf , amount = %d."
         "Expected: x1_cor = %lf , x2_cor = %lf , amount_cor = "
-        "%d\n", *n, decisions.root1, decisions.root2, decisions.amount, x1_cor, x2_cor, amount_cor);
+        "%d\033[1;0m\n", *n, decisions.root1, decisions.root2, decisions.amount, x1_cor, x2_cor, amount_cor);
     }
     else
     {
-        printf ("TEST %d OK\n", *n);
+        printf ("\033[1;32mTEST %d WITH DATA: [a=%.1lf, b=%.1lf, c=%.1lf] IS OK!!!\033[1;0m\n", *n, parametrs[0], parametrs[1], parametrs[2]);
     }
     return 1;    
 }
@@ -42,12 +41,12 @@ int test_allfile (void)
     char num1[40];
     char num2[40];
 
-    file_testing = openfile();
+    file_testing = openfile ();
 
     fscanf (file_testing, "%d", &lot);
     double mass[5] = {};
 
-    int amount_cor = 3;
+    int amount_cor = UNDEFINED_SOL;
 
     for (int i = 0; i < lot; i++)
     {   
@@ -57,8 +56,7 @@ int test_allfile (void)
         mass[4] = nan_file(num2);
         counter += test_solofile (&counter, mass, amount_cor);
     }
-
-    if (fclose (file_testing) != 0) printf ("ERROR OF CLOSING\n");  //check for closing
+    if (fclose (file_testing) != 0) printf ("\033[1;31mERROR OF CLOSING\033[1;0m\n");  //check for closing
 
     return counter;        
 }
