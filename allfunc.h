@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define MYASSERT(condition) if (condition) printf("ERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s() , LINE %d \n", __FILE__, __func__, __LINE__);
+
 //--------------------------------------------------------------------------------------
 //constants with define and enum
 
@@ -16,7 +18,7 @@ enum solutions {
     ZERO_SOL = 0,
     ONE_SOL  = 1,
     TWO_SOL  = 2,
-    NAR      = 3,
+    UNDEFINED_SOL = 3,
 };
 
 //--------------------------------------------------------------------------------------
