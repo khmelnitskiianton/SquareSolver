@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <assert.h>
 #include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 
 //--------------------------------------------------------------------------------------
 //constants with define and enum
@@ -65,3 +67,15 @@ int welcome (void);
 
 //12. Function for filler of NAN
 void filler_coeffs(double *args);
+
+//13. Function of testing one line in txt tests
+int test_solofile(int *n,double mass[], int amount_cor);
+
+//14. Testing all txt file
+int test_allfile(void);
+
+//15. Function of checking open file
+FILE * openfile(void);
+
+//16. Function of scan NAN 
+double nan_file(char stroka[]);
