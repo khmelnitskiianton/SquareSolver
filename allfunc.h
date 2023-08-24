@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MYASSERT(condition) if (!condition) printf("\033[1;31mERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s , LINE %d\033[1;0m\n", __FILE__, __PRETTY_FUNCTION__, __LINE__)
+// if (!n != NULL)
+#define MYASSERT(condition) if (!(condition)) printf ("\033[1;%dmERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s , LINE %d\033[1;%dm\n", RED, __FILE__, __PRETTY_FUNCTION__, __LINE__, RESET)
 
 //--------------------------------------------------------------------------------------
 //constants with define and enum
@@ -19,6 +20,16 @@ enum solutions {
     ONE_SOL  = 1,
     TWO_SOL  = 2,
     UNDEFINED_SOL = 3,
+};
+
+enum colors {
+    RED = 31,
+    GREEN = 32,
+    YELLOW = 33,
+    BLUE = 34,
+    MAGENTA = 35,
+    CYAN = 36,
+    RESET = 0,
 };
 
 //--------------------------------------------------------------------------------------
@@ -68,16 +79,16 @@ int test_all (void);
 int welcome (void);
 
 //12. Function for filler of NAN
-void filler_coeffs(double *args);
+void filler_coeffs (double *args);
 
 //13. Function of testing one line in txt tests
-int test_solofile(int *n,double mass[], int amount_cor);
+int test_solofile (int *n,double mass[], int amount_cor);
 
 //14. Testing all txt file
-int test_allfile(void);
+int test_allfile (void);
 
 //15. Function of checking open file
-FILE * openfile(void);
+FILE * openfile (void);
 
 //16. Function of scan NAN 
-double nan_file(char stroka[]);
+double nan_file (char stroka[]);
