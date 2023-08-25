@@ -1,0 +1,86 @@
+\doxysection{testing\+\_\+files.\+cpp File Reference}
+\hypertarget{testing__files_8cpp}{}\label{testing__files_8cpp}\index{testing\_files.cpp@{testing\_files.cpp}}
+
+
+Running file of Unit tests from txt file.  
+
+
+{\ttfamily \#include \"{}head.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{testing__files_8cpp_aa985ef5cedd4c90895b30c3143b695ec}{test\+\_\+solofile}} (int \texorpdfstring{$\ast$}{*}n, double test_data\mbox{[}$\,$\mbox{]}, int amount\+\_\+cor)
+\begin{DoxyCompactList}\small\item\em Function of check one unit test. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{testing__files_8cpp_a9e0dc91f5284de3db19281646d00e105}{test\+\_\+allfile}} (void)
+\begin{DoxyCompactList}\small\item\em Function of process all unit tests from file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{testing__files_8cpp_a12405f46d723a5439d8b26c4db6a1e42}{nan\+\_\+file}} (char stroka\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Function of checking for NAN in file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Running file of Unit tests from txt file. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{testing__files_8cpp_a12405f46d723a5439d8b26c4db6a1e42}\label{testing__files_8cpp_a12405f46d723a5439d8b26c4db6a1e42} 
+\index{testing\_files.cpp@{testing\_files.cpp}!nan\_file@{nan\_file}}
+\index{nan\_file@{nan\_file}!testing\_files.cpp@{testing\_files.cpp}}
+\doxysubsubsection{\texorpdfstring{nan\_file()}{nan\_file()}}
+{\footnotesize\ttfamily double nan\+\_\+file (\begin{DoxyParamCaption}\item[{char}]{stroka\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Function of checking for NAN in file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stroka} & number but in string type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double number NAN or value
+\end{DoxyReturn}
+It take string and check for \"{}\+NAN\"{}, and in dependence of result it can be NAN(we scan nan at the end) or standart double value \Hypertarget{testing__files_8cpp_a9e0dc91f5284de3db19281646d00e105}\label{testing__files_8cpp_a9e0dc91f5284de3db19281646d00e105} 
+\index{testing\_files.cpp@{testing\_files.cpp}!test\_allfile@{test\_allfile}}
+\index{test\_allfile@{test\_allfile}!testing\_files.cpp@{testing\_files.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_allfile()}{test\_allfile()}}
+{\footnotesize\ttfamily int test\+\_\+allfile (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function of process all unit tests from file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em test_data} & array of coefficients and correct roots \\
+\hline
+\mbox{\texttt{ in}}  & {\em amount\+\_\+cor} & amount of correct roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+amount of tests
+\end{DoxyReturn}
+This function scaning file tests.\+txt and with call \doxylink{testing_8h_aa985ef5cedd4c90895b30c3143b695ec}{test\+\_\+solofile()} checking all lines in file \Hypertarget{testing__files_8cpp_aa985ef5cedd4c90895b30c3143b695ec}\label{testing__files_8cpp_aa985ef5cedd4c90895b30c3143b695ec} 
+\index{testing\_files.cpp@{testing\_files.cpp}!test\_solofile@{test\_solofile}}
+\index{test\_solofile@{test\_solofile}!testing\_files.cpp@{testing\_files.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_solofile()}{test\_solofile()}}
+{\footnotesize\ttfamily int test\+\_\+solofile (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{n,  }\item[{double}]{test_data\mbox{[}$\,$\mbox{]},  }\item[{int}]{amount\+\_\+cor }\end{DoxyParamCaption})}
+
+
+
+Function of check one unit test. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & counter of tests \\
+\hline
+\mbox{\texttt{ in}}  & {\em test_data} & array of coefficients and correct roots \\
+\hline
+\mbox{\texttt{ in}}  & {\em amount\+\_\+cor} & amount of correct roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for counter of tests
+\end{DoxyReturn}
+This function take parametrs of one unit test and check them for results of my solving function Result of unit test will be output in message 

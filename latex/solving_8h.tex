@@ -1,0 +1,137 @@
+\doxysection{solving.\+h File Reference}
+\hypertarget{solving_8h}{}\label{solving_8h}\index{solving.h@{solving.h}}
+
+
+Header file of calculations This file includes structures for values, constants and functions for process quadratic equation.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solving_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_roots}{Roots}}
+\begin{DoxyCompactList}\small\item\em The structure for roots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979}{solutions}} \{ \newline
+\mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979af3e6fa9925576441c12b61696459de11}{INF\+\_\+\+SOL}} = -\/1
+, \mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979a59079648c759d05833a62e33410e719f}{ZERO\+\_\+\+SOL}} = 0
+, \mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979a9975cac25be5c19ebc100ebc58e67004}{ONE\+\_\+\+SOL}} = 1
+, \mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979a681db2e870834d62487cf322aacd31ac}{TWO\+\_\+\+SOL}} = 2
+, \newline
+\mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979a0cec59dee976f0e5333587b87de9125f}{UNDEFINED\+\_\+\+SOL}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Set of possible solutions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{solving_8h_a127058c8e4c6ff2a1aa54a70203a2559}{quadratic\+\_\+solver}} (\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}sols, double \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Main function of solving quadratic equation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solving_8h_a3c5eaa6e4e4c7efa651fdd65e43f0dbf}{linal\+\_\+solver}} (\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}sols, double \texorpdfstring{$\ast$}{*}args)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{solving_8h_a5a0e1e24ced3228ae4d5946af6d5f187}\label{solving_8h_a5a0e1e24ced3228ae4d5946af6d5f187} 
+const int {\bfseries QUANTITY} = 3
+\begin{DoxyCompactList}\small\item\em Constant for equation of quantity coefficients, in case of quadratic equation = 3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of calculations This file includes structures for values, constants and functions for process quadratic equation. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{solving_8h_a97be9d71c3998b7a3a97e9403e375979}\label{solving_8h_a97be9d71c3998b7a3a97e9403e375979} 
+\index{solving.h@{solving.h}!solutions@{solutions}}
+\index{solutions@{solutions}!solving.h@{solving.h}}
+\doxysubsubsection{\texorpdfstring{solutions}{solutions}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979}{solutions}}}
+
+
+
+Set of possible solutions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INF\_SOL@{INF\_SOL}!solving.h@{solving.h}}\index{solving.h@{solving.h}!INF\_SOL@{INF\_SOL}}}\Hypertarget{solving_8h_a97be9d71c3998b7a3a97e9403e375979af3e6fa9925576441c12b61696459de11}\label{solving_8h_a97be9d71c3998b7a3a97e9403e375979af3e6fa9925576441c12b61696459de11} 
+INF\+\_\+\+SOL&Value of infinity of solutions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZERO\_SOL@{ZERO\_SOL}!solving.h@{solving.h}}\index{solving.h@{solving.h}!ZERO\_SOL@{ZERO\_SOL}}}\Hypertarget{solving_8h_a97be9d71c3998b7a3a97e9403e375979a59079648c759d05833a62e33410e719f}\label{solving_8h_a97be9d71c3998b7a3a97e9403e375979a59079648c759d05833a62e33410e719f} 
+ZERO\+\_\+\+SOL&Value of zero of solutions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE\_SOL@{ONE\_SOL}!solving.h@{solving.h}}\index{solving.h@{solving.h}!ONE\_SOL@{ONE\_SOL}}}\Hypertarget{solving_8h_a97be9d71c3998b7a3a97e9403e375979a9975cac25be5c19ebc100ebc58e67004}\label{solving_8h_a97be9d71c3998b7a3a97e9403e375979a9975cac25be5c19ebc100ebc58e67004} 
+ONE\+\_\+\+SOL&Value of one of solutions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_SOL@{TWO\_SOL}!solving.h@{solving.h}}\index{solving.h@{solving.h}!TWO\_SOL@{TWO\_SOL}}}\Hypertarget{solving_8h_a97be9d71c3998b7a3a97e9403e375979a681db2e870834d62487cf322aacd31ac}\label{solving_8h_a97be9d71c3998b7a3a97e9403e375979a681db2e870834d62487cf322aacd31ac} 
+TWO\+\_\+\+SOL&Value of two of solutions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDEFINED\_SOL@{UNDEFINED\_SOL}!solving.h@{solving.h}}\index{solving.h@{solving.h}!UNDEFINED\_SOL@{UNDEFINED\_SOL}}}\Hypertarget{solving_8h_a97be9d71c3998b7a3a97e9403e375979a0cec59dee976f0e5333587b87de9125f}\label{solving_8h_a97be9d71c3998b7a3a97e9403e375979a0cec59dee976f0e5333587b87de9125f} 
+UNDEFINED\+\_\+\+SOL&Value of undefined parametr. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{solving_8h_a3c5eaa6e4e4c7efa651fdd65e43f0dbf}\label{solving_8h_a3c5eaa6e4e4c7efa651fdd65e43f0dbf} 
+\index{solving.h@{solving.h}!linal\_solver@{linal\_solver}}
+\index{linal\_solver@{linal\_solver}!solving.h@{solving.h}}
+\doxysubsubsection{\texorpdfstring{linal\_solver()}{linal\_solver()}}
+{\footnotesize\ttfamily void linal\+\_\+solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}}]{sols,  }\item[{double \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+Additional function for solving special case of linal equation. a = 0. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em args} & Double array of coefficients \\
+\hline
+\mbox{\texttt{ out}}  & {\em sols} & Structure for writing \doxylink{solving_8h_a97be9d71c3998b7a3a97e9403e375979}{solutions(structure Roots)}\\
+\hline
+\end{DoxyParams}
+This function called if $ a = 0 $
+
+If $ b \neq 0 $, then form of equation is $ bx + c = 0 $ and solution is $ x = \frac{-c}{b} $
+
+If $ b = 0 $, then form of equation is $ c = 0 $ and case\+:
+\begin{DoxyItemize}
+\item $ c = 0 $, then $ 0 = 0 $ and its infinity of roots.
+\item $ c \neq 0 $, then no roots. 
+\end{DoxyItemize}\Hypertarget{solving_8h_a127058c8e4c6ff2a1aa54a70203a2559}\label{solving_8h_a127058c8e4c6ff2a1aa54a70203a2559} 
+\index{solving.h@{solving.h}!quadratic\_solver@{quadratic\_solver}}
+\index{quadratic\_solver@{quadratic\_solver}!solving.h@{solving.h}}
+\doxysubsubsection{\texorpdfstring{quadratic\_solver()}{quadratic\_solver()}}
+{\footnotesize\ttfamily void quadratic\+\_\+solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}}]{sols,  }\item[{double \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Main function of solving quadratic equation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em args} & Double array of coefficients \\
+\hline
+\mbox{\texttt{ out}}  & {\em sols} & Structure for writing \doxylink{solving_8h_a97be9d71c3998b7a3a97e9403e375979}{solutions(structure Roots)}\\
+\hline
+\end{DoxyParams}
+Here I use formules of solving quadratic equation\+:
+
+General form is $ ax^2 + bx + c = 0 $
+
+This function return result if $ a \neq 0 $
+
+First i calculate discriminant\+: $ D = b^2 - 4ac$ Then I compare it with 0\+:
+\begin{DoxyItemize}
+\item If $ D > 0 $ Its two roots, then I use formula\+: $ x_{1,2} = \frac{-b \pm \sqrt{D}}{2a} $ and its values assigned to struct of roots.
+\item If $ D = 0 $ Its one root, then I use formula\+: $ x = \frac{-b}{2a} $ and it value assigned to struct of roots, then second root is NAN.
+\item If $ D < 0 $ Its no solution, then 1 and 2 roots are NAN. 
+\end{DoxyItemize}

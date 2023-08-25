@@ -1,0 +1,117 @@
+\doxysection{in.\+cpp File Reference}
+\hypertarget{in_8cpp}{}\label{in_8cpp}\index{in.cpp@{in.cpp}}
+
+
+Running file of input and entering.  
+
+
+{\ttfamily \#include \"{}head.\+h\"{}}\newline
+Include dependency graph for in.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{in_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{in_8cpp_a41cd1acb29d41175fb0e8ba791b26cfe}\label{in_8cpp_a41cd1acb29d41175fb0e8ba791b26cfe} 
+void {\bfseries clean\+\_\+buffer} (void)
+\begin{DoxyCompactList}\small\item\em Function of cleaning buffer of input ~\newline
+ From book of Prata its a way of cleaning rubbish from buffer line in input. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{in_8cpp_a3b62daa53892cd4736d2f67f3485f79e}{enter\+\_\+double}} (void)
+\begin{DoxyCompactList}\small\item\em Function of correct entering one double number ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{in_8cpp_aaec49892b47c7217aa40fdb55a648cea}{input\+\_\+args}} (double \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Function of entering main coefficients ~\newline
+ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{in_8cpp_a9e9149134a233fc793fba496ce3691fc}{welcome}} (void)
+\begin{DoxyCompactList}\small\item\em Function of connection to user ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{in_8cpp_a0b8b5459d63bd3d7fdec80c2f136520e}{filler\+\_\+coeffs}} (double \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Function of filling double array ~\newline
+ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{in_8cpp_a8f3cdcfbe0c476e161172a7eef6470f1}{user\+\_\+choice}} (void)
+\begin{DoxyCompactList}\small\item\em Function of choice Y or N. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Running file of input and entering. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{in_8cpp_a3b62daa53892cd4736d2f67f3485f79e}\label{in_8cpp_a3b62daa53892cd4736d2f67f3485f79e} 
+\index{in.cpp@{in.cpp}!enter\_double@{enter\_double}}
+\index{enter\_double@{enter\_double}!in.cpp@{in.cpp}}
+\doxysubsubsection{\texorpdfstring{enter\_double()}{enter\_double()}}
+{\footnotesize\ttfamily double enter\+\_\+double (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function of correct entering one double number ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+entering double number it includes security from words or big numbers 
+\end{DoxyReturn}
+\Hypertarget{in_8cpp_a0b8b5459d63bd3d7fdec80c2f136520e}\label{in_8cpp_a0b8b5459d63bd3d7fdec80c2f136520e} 
+\index{in.cpp@{in.cpp}!filler\_coeffs@{filler\_coeffs}}
+\index{filler\_coeffs@{filler\_coeffs}!in.cpp@{in.cpp}}
+\doxysubsubsection{\texorpdfstring{filler\_coeffs()}{filler\_coeffs()}}
+{\footnotesize\ttfamily void filler\+\_\+coeffs (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Function of filling double array ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & double array of coefficients \\
+\hline
+\end{DoxyParams}
+\Hypertarget{in_8cpp_aaec49892b47c7217aa40fdb55a648cea}\label{in_8cpp_aaec49892b47c7217aa40fdb55a648cea} 
+\index{in.cpp@{in.cpp}!input\_args@{input\_args}}
+\index{input\_args@{input\_args}!in.cpp@{in.cpp}}
+\doxysubsubsection{\texorpdfstring{input\_args()}{input\_args()}}
+{\footnotesize\ttfamily void input\+\_\+args (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Function of entering main coefficients ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & double array of coefficients It includes friendly outout and fuction if entering solo argument \\
+\hline
+\end{DoxyParams}
+\Hypertarget{in_8cpp_a8f3cdcfbe0c476e161172a7eef6470f1}\label{in_8cpp_a8f3cdcfbe0c476e161172a7eef6470f1} 
+\index{in.cpp@{in.cpp}!user\_choice@{user\_choice}}
+\index{user\_choice@{user\_choice}!in.cpp@{in.cpp}}
+\doxysubsubsection{\texorpdfstring{user\_choice()}{user\_choice()}}
+{\footnotesize\ttfamily int user\+\_\+choice (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function of choice Y or N. 
+
+\begin{DoxyReturn}{Returns}
+int(char) Y or N symbols This function take Y or N from user -\/ choice, if user write something else, he will swear 
+\end{DoxyReturn}
+\Hypertarget{in_8cpp_a9e9149134a233fc793fba496ce3691fc}\label{in_8cpp_a9e9149134a233fc793fba496ce3691fc} 
+\index{in.cpp@{in.cpp}!welcome@{welcome}}
+\index{welcome@{welcome}!in.cpp@{in.cpp}}
+\doxysubsubsection{\texorpdfstring{welcome()}{welcome()}}
+{\footnotesize\ttfamily int welcome (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function of connection to user ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+1 if user wants to continue hand entering 0 if user dont want hand entering First its welcome message Then user can press Y for auto testing from txt file or N and continue Then user can press Y for hand testing if he wants to enter coefficients or N and then programm ends 
+\end{DoxyReturn}

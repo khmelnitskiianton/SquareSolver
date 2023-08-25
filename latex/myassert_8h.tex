@@ -1,0 +1,34 @@
+\doxysection{myassert.\+h File Reference}
+\hypertarget{myassert_8h}{}\label{myassert_8h}\index{myassert.h@{myassert.h}}
+
+
+Header file for myassert.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{myassert_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{myassert_8h_a515a61f25f23417277b04f9122e6961c}{MYASSERT}}(condition)~if (!(condition)) printf (RED \"{}ERROR!!! YOU HAVE SOME PIZDEC IN FILE \%s , IN FUNCTION \%s , LINE \%d\textbackslash{}n\"{} RESET, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+PRETTY\+\_\+\+FUNCTION\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for myassert. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{myassert_8h_a515a61f25f23417277b04f9122e6961c}\label{myassert_8h_a515a61f25f23417277b04f9122e6961c} 
+\index{myassert.h@{myassert.h}!MYASSERT@{MYASSERT}}
+\index{MYASSERT@{MYASSERT}!myassert.h@{myassert.h}}
+\doxysubsubsection{\texorpdfstring{MYASSERT}{MYASSERT}}
+{\footnotesize\ttfamily \#define MYASSERT(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})~if (!(condition)) printf (RED \"{}ERROR!!! YOU HAVE SOME PIZDEC IN FILE \%s , IN FUNCTION \%s , LINE \%d\textbackslash{}n\"{} RESET, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+PRETTY\+\_\+\+FUNCTION\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)}
+
+Like assert() this macros call if error, but it don\textquotesingle{}t stop all programm. Only message of error 

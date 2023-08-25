@@ -1,0 +1,76 @@
+\doxysection{comparing.\+h File Reference}
+\hypertarget{comparing_8h}{}\label{comparing_8h}\index{comparing.h@{comparing.h}}
+
+
+Header file of comparing double numbers functions.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{comparing_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{comparing_8h_a818fcddac7bac630e22ee0d4075dc66d}{compare}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Function comparing double numbers ~\newline
+ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{comparing_8h_a5ed42255255785f020c3e72806fbc5e0}{check\+\_\+double}} (double z)
+\begin{DoxyCompactList}\small\item\em Function of checking double for NAN or INFINITY ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{comparing_8h_a31f24d42ed72e7836853a633ec5719db}\label{comparing_8h_a31f24d42ed72e7836853a633ec5719db} 
+const double {\bfseries EPSILONE} = 1e-\/36
+\begin{DoxyCompactList}\small\item\em Constant epsilone for comparing double numbers! \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of comparing double numbers functions. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{comparing_8h_a5ed42255255785f020c3e72806fbc5e0}\label{comparing_8h_a5ed42255255785f020c3e72806fbc5e0} 
+\index{comparing.h@{comparing.h}!check\_double@{check\_double}}
+\index{check\_double@{check\_double}!comparing.h@{comparing.h}}
+\doxysubsubsection{\texorpdfstring{check\_double()}{check\_double()}}
+{\footnotesize\ttfamily int check\+\_\+double (\begin{DoxyParamCaption}\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Function of checking double for NAN or INFINITY ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & Testing number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(bool) 1 if it is not real, 0 if it is real Function of testing for not real double 
+\end{DoxyReturn}
+\Hypertarget{comparing_8h_a818fcddac7bac630e22ee0d4075dc66d}\label{comparing_8h_a818fcddac7bac630e22ee0d4075dc66d} 
+\index{comparing.h@{comparing.h}!compare@{compare}}
+\index{compare@{compare}!comparing.h@{comparing.h}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily int compare (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Function comparing double numbers ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,y} & Comparing,double numbers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(bool) 1 if they are equal, 0 if they are not equal
+\end{DoxyReturn}
+Function of comparing two double numbers, and return 1 if they are equal(and NAN = NAN), and 0 if not 

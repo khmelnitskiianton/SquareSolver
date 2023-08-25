@@ -1,0 +1,251 @@
+\doxysection{inout.\+h File Reference}
+\hypertarget{inout_8h}{}\label{inout_8h}\index{inout.h@{inout.h}}
+
+
+Header file of input/output.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{inout_8h_a41cd1acb29d41175fb0e8ba791b26cfe}{clean\+\_\+buffer}} (void)
+\begin{DoxyCompactList}\small\item\em Function of cleaning buffer of input ~\newline
+ \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{inout_8h_a3b62daa53892cd4736d2f67f3485f79e}{enter\+\_\+double}} (void)
+\begin{DoxyCompactList}\small\item\em Function of checking double for NAN or INFINITY ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inout_8h_aaec49892b47c7217aa40fdb55a648cea}{input\+\_\+args}} (double \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Function of entering main coefficients ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inout_8h_a3b16e4bcd6f321c12412ed42b75a00bc}{process\+\_\+out}} (\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}sols, int counter)
+\begin{DoxyCompactList}\small\item\em Function of output result of solving. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inout_8h_a9e9149134a233fc793fba496ce3691fc}{welcome}} (void)
+\begin{DoxyCompactList}\small\item\em Function of connection to user ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inout_8h_a0b8b5459d63bd3d7fdec80c2f136520e}{filler\+\_\+coeffs}} (double \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Function of filling double array ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of input/output. 
+
+It includes functions of input, entering and output, finding 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{inout_8h_a41cd1acb29d41175fb0e8ba791b26cfe}\label{inout_8h_a41cd1acb29d41175fb0e8ba791b26cfe} 
+\index{inout.h@{inout.h}!clean\_buffer@{clean\_buffer}}
+\index{clean\_buffer@{clean\_buffer}!inout.h@{inout.h}}
+\doxysubsubsection{\texorpdfstring{clean\_buffer()}{clean\_buffer()}}
+{\footnotesize\ttfamily void clean\+\_\+buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function of cleaning buffer of input ~\newline
+ 
+
+From book of Prata its a way of cleaning rubbish from buffer line in input
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ clean\_buffer\ (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ ch\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{while}((ch\ =\ getchar\ ())\ !=\ \textcolor{charliteral}{'\(\backslash\)n'})\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ putchar\ (ch);}
+\DoxyCodeLine{\}\ \ \ }
+
+\end{DoxyCode}
+ \Hypertarget{inout_8h_a3b62daa53892cd4736d2f67f3485f79e}\label{inout_8h_a3b62daa53892cd4736d2f67f3485f79e} 
+\index{inout.h@{inout.h}!enter\_double@{enter\_double}}
+\index{enter\_double@{enter\_double}!inout.h@{inout.h}}
+\doxysubsubsection{\texorpdfstring{enter\_double()}{enter\_double()}}
+{\footnotesize\ttfamily double enter\+\_\+double (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function of checking double for NAN or INFINITY ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & Testing number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(bool) 1 if it is not real, 0 if it is real
+\end{DoxyReturn}
+Function of testing for not real double
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ enter\_double\ (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ num\ =\ NAN;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{while}((scanf\ (\textcolor{stringliteral}{"{}\%lf"{}},\ \&num)\ !=\ 1)\ ||\ !(check\_double\ (num)))}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ clean\_buffer\ ();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)033[1;31mWtf?\ Its\ not\ double\ number.\ Maybe\ it\ is\ a\ single\ number.\ Another\ attempt\ you\ piece\ of\ shit,\ hey\ you,\ MAAAAN!\(\backslash\)033[1;0m\(\backslash\)n"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ num;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{inout_8h_a0b8b5459d63bd3d7fdec80c2f136520e}\label{inout_8h_a0b8b5459d63bd3d7fdec80c2f136520e} 
+\index{inout.h@{inout.h}!filler\_coeffs@{filler\_coeffs}}
+\index{filler\_coeffs@{filler\_coeffs}!inout.h@{inout.h}}
+\doxysubsubsection{\texorpdfstring{filler\_coeffs()}{filler\_coeffs()}}
+{\footnotesize\ttfamily void filler\+\_\+coeffs (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Function of filling double array ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & double array of coefficients\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ filler\_coeffs\ (\textcolor{keywordtype}{double}\ *args)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{solving_8h_a5a0e1e24ced3228ae4d5946af6d5f187}{QUANTITY}};\ i++)\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ args[i]\ =\ NAN;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{inout_8h_aaec49892b47c7217aa40fdb55a648cea}\label{inout_8h_aaec49892b47c7217aa40fdb55a648cea} 
+\index{inout.h@{inout.h}!input\_args@{input\_args}}
+\index{input\_args@{input\_args}!inout.h@{inout.h}}
+\doxysubsubsection{\texorpdfstring{input\_args()}{input\_args()}}
+{\footnotesize\ttfamily void input\+\_\+args (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Function of entering main coefficients ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & double array of coefficients\\
+\hline
+\end{DoxyParams}
+It includes friendly outout and fuction if entering solo argument
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ input\_args\ (\textcolor{keywordtype}{double}\ *args)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ amount\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{solving_8h_a5a0e1e24ced3228ae4d5946af6d5f187}{QUANTITY}};\ i++)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ args[i]\ =\ enter\_double\ ();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ amount\ +=\ 1;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ ==\ 1)\ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;34mYou\ enter\ a\ =\ \%.2lf\ !\(\backslash\)033[1;0m\(\backslash\)n"{}},\ args[0]);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ ==\ 2)\ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;34mNow\ you\ enter\ a\ =\ \%.2lf\ and\ b\ =\ \%.2lf\ !!\(\backslash\)033[1;0m\(\backslash\)n"{}},\ args[0],\ args[1]);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ ==\ 3)\ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;34mSuper,\ you\ enter\ a\ =\ \%.2lf\ and\ b\ =\ \%.2lf\ and\ c\ =\ \%.2lf\ !!!\(\backslash\)033[1;0m\(\backslash\)n"{}},\ args[0],\ args[1],\ args[2]);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{inout_8h_a3b16e4bcd6f321c12412ed42b75a00bc}\label{inout_8h_a3b16e4bcd6f321c12412ed42b75a00bc} 
+\index{inout.h@{inout.h}!process\_out@{process\_out}}
+\index{process\_out@{process\_out}!inout.h@{inout.h}}
+\doxysubsubsection{\texorpdfstring{process\_out()}{process\_out()}}
+{\footnotesize\ttfamily void process\+\_\+out (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}}]{sols,  }\item[{int}]{counter }\end{DoxyParamCaption})}
+
+
+
+Function of output result of solving. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sols} & structure of roots \\
+\hline
+{\em counter} & amount of roots\\
+\hline
+\end{DoxyParams}
+In dependence of amount, it outputting diffrent messages
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{inout_8h_a3b16e4bcd6f321c12412ed42b75a00bc}{process\_out}}\ (\mbox{\hyperlink{struct_roots}{Roots}}\ *sols,\ \textcolor{keywordtype}{int}\ counter)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{switch}\ (counter)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979af3e6fa9925576441c12b61696459de11}{INF\_SOL}}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;\%dmInfinity\ of\ solutions.\ a\ =\ b\ =\ c\ =\ 0\(\backslash\)033[1;\%dm"{}},\ GREEN,\ RESET);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979a59079648c759d05833a62e33410e719f}{ZERO\_SOL}}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;\%dmNo\ solutions.\(\backslash\)033[1;\%dm"{}},\ GREEN,\ RESET);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979a9975cac25be5c19ebc100ebc58e67004}{ONE\_SOL}}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;\%dmOne\ solution.\ x\ =\ \%lf\(\backslash\)033[1;\%dm"{}},\ GREEN,\ sols\ -\/>\ root1,\ RESET);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{solving_8h_a97be9d71c3998b7a3a97e9403e375979a681db2e870834d62487cf322aacd31ac}{TWO\_SOL}}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;\%dmTwo\ solutions.\(\backslash\)nx1\ =\ \%lf\(\backslash\)nx2\ =\ \%lf\(\backslash\)033[1;\%dm"{}},\ GREEN,\ (*sols).root1,\ (*sols).root2,\ RESET);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;\%dmERROR\ PROBLEMS\ IN\ LOGIC.\ YOUR\ LOGIC.\ CHECK\ UR\ BRAINS.\ AMOUNT\ NOT\ NORMAL\(\backslash\)033[1;\%dm"{}},RED,\ RESET);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{inout_8h_a9e9149134a233fc793fba496ce3691fc}\label{inout_8h_a9e9149134a233fc793fba496ce3691fc} 
+\index{inout.h@{inout.h}!welcome@{welcome}}
+\index{welcome@{welcome}!inout.h@{inout.h}}
+\doxysubsubsection{\texorpdfstring{welcome()}{welcome()}}
+{\footnotesize\ttfamily int welcome (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function of connection to user ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+1 if user wants to continue hand entering 0 if user dont want hand entering
+\end{DoxyReturn}
+First its welcome message Then user can press Y for auto testing from txt file or N and continue Then user can press Y for hand testing if he wants to enter coefficients or N and then programm ends
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ welcome\ (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ ch\ =\ 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)033[1;\%dm\ \ \ \ QUADRATIC\ EQUATION\ SOLVER\ BY\ KHMELNITSKII\ ANTON\ SUMMER\ PROGRAMM\ CAMP\ 2023\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)033[1;\%dm\(\backslash\)n"{}},\ MAGENTA,\ RESET);}
+\DoxyCodeLine{\ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)033[1;\%dmEnter\ arguments(numbers)\ of\ quadratic\ equation:\ ax\string^2\ +\ bx\ +\ c\ =\ 0.\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ \ Please\ enter\ only\ normal\ double\ numbers!!!\(\backslash\)033[1;\%dm\(\backslash\)n"{}},\ CYAN,\ RESET);}
+\DoxyCodeLine{\ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)033[1;\%dm\ \ \ \ YOU\ WANT\ TO\ USE\ AUTO\ TESTING\ ???\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ Enter\ Y\ or\ N\(\backslash\)033[1;\%dm\(\backslash\)n\ \ \ \ \ \ \ \ \ \ \ \ "{}},\ YELLOW,\ RESET);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ ch\ =\ getchar\ ();}
+\DoxyCodeLine{\ \ \ \ clean\_buffer\ ();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (toupper\ (ch)\ ==\ \textcolor{charliteral}{'Y'})\ test\_allfile\ ();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;\%dm\ \ \ \ Do\ you\ want\ to\ continue\ use\ this\ program\ ???\ \(\backslash\)n\ \ \ \ "{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ \ Enter\ Y\ or\ N\ \(\backslash\)033[1;\%dm\(\backslash\)n\ \ \ \ \ \ \ \ \ \ \ "{}},\ YELLOW,\ RESET);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ ch\ =\ getchar\ ();}
+\DoxyCodeLine{\ \ \ \ clean\_buffer\ ();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (toupper\ (ch)\ ==\ \textcolor{charliteral}{'Y'})}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}\(\backslash\)033[1;\%dmNOW\ enter\ 3\ arguments(numbers)\ of\ quadratic\ equation:\ ax\string^2\ +\ bx\ +\ c\ =\ 0.\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ \ \ After\ every\ number\ press\ enter/tab/space!\(\backslash\)033[1;\%dm\(\backslash\)n"{}},\ GREEN,\ RESET);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,80 @@
+\doxysection{solving.\+cpp File Reference}
+\hypertarget{solving_8cpp}{}\label{solving_8cpp}\index{solving.cpp@{solving.cpp}}
+
+
+Running file of calculating quadratic equation.  
+
+
+{\ttfamily \#include \"{}head.\+h\"{}}\newline
+Include dependency graph for solving.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solving_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{solving_8cpp_a127058c8e4c6ff2a1aa54a70203a2559}{quadratic\+\_\+solver}} (\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}sols, double \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Main function of solving quadratic equation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solving_8cpp_a3c5eaa6e4e4c7efa651fdd65e43f0dbf}{linal\+\_\+solver}} (\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}sols, double \texorpdfstring{$\ast$}{*}args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Running file of calculating quadratic equation. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{solving_8cpp_a3c5eaa6e4e4c7efa651fdd65e43f0dbf}\label{solving_8cpp_a3c5eaa6e4e4c7efa651fdd65e43f0dbf} 
+\index{solving.cpp@{solving.cpp}!linal\_solver@{linal\_solver}}
+\index{linal\_solver@{linal\_solver}!solving.cpp@{solving.cpp}}
+\doxysubsubsection{\texorpdfstring{linal\_solver()}{linal\_solver()}}
+{\footnotesize\ttfamily void linal\+\_\+solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}}]{sols,  }\item[{double \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+Additional function for solving special case of linal equation. a = 0. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em args} & Double array of coefficients \\
+\hline
+\mbox{\texttt{ out}}  & {\em sols} & Structure for writing \doxylink{solving_8h_a97be9d71c3998b7a3a97e9403e375979}{solutions(structure Roots)}\\
+\hline
+\end{DoxyParams}
+This function called if $ a = 0 $
+
+If $ b \neq 0 $, then form of equation is $ bx + c = 0 $ and solution is $ x = \frac{-c}{b} $
+
+If $ b = 0 $, then form of equation is $ c = 0 $ and case\+:
+\begin{DoxyItemize}
+\item $ c = 0 $, then $ 0 = 0 $ and its infinity of roots.
+\item $ c \neq 0 $, then no roots. 
+\end{DoxyItemize}\Hypertarget{solving_8cpp_a127058c8e4c6ff2a1aa54a70203a2559}\label{solving_8cpp_a127058c8e4c6ff2a1aa54a70203a2559} 
+\index{solving.cpp@{solving.cpp}!quadratic\_solver@{quadratic\_solver}}
+\index{quadratic\_solver@{quadratic\_solver}!solving.cpp@{solving.cpp}}
+\doxysubsubsection{\texorpdfstring{quadratic\_solver()}{quadratic\_solver()}}
+{\footnotesize\ttfamily void quadratic\+\_\+solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_roots}{Roots}} \texorpdfstring{$\ast$}{*}}]{sols,  }\item[{double \texorpdfstring{$\ast$}{*}}]{args }\end{DoxyParamCaption})}
+
+
+
+Main function of solving quadratic equation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em args} & Double array of coefficients \\
+\hline
+\mbox{\texttt{ out}}  & {\em sols} & Structure for writing \doxylink{solving_8h_a97be9d71c3998b7a3a97e9403e375979}{solutions(structure Roots)}\\
+\hline
+\end{DoxyParams}
+Here I use formules of solving quadratic equation\+:
+
+General form is $ ax^2 + bx + c = 0 $
+
+This function return result if $ a \neq 0 $
+
+First i calculate discriminant\+: $ D = b^2 - 4ac$ Then I compare it with 0\+:
+\begin{DoxyItemize}
+\item If $ D > 0 $ Its two roots, then I use formula\+: $ x_{1,2} = \frac{-b \pm \sqrt{D}}{2a} $ and its values assigned to struct of roots.
+\item If $ D = 0 $ Its one root, then I use formula\+: $ x = \frac{-b}{2a} $ and it value assigned to struct of roots, then second root is NAN.
+\item If $ D < 0 $ Its no solution, then 1 and 2 roots are NAN. 
+\end{DoxyItemize}
