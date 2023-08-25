@@ -22,7 +22,7 @@ void process_out (Roots *sols, int counter)
             break;
 
         case TWO_SOL:
-            printf (GREEN "Two solutions.\nx1 = %lf\nx2 = %lf\033[1;%dm\n" RESET, (*sols).root1, (*sols).root2);
+            printf (GREEN "Two solutions.\nx1 = %lf\nx2 = %lf\n" RESET, (*sols).root1, (*sols).root2);
             break;
 
         default:
