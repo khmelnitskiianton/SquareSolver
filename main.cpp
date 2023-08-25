@@ -1,37 +1,42 @@
-#include "head.h"                                // HEADER with all func,const and struck
+/*!
+    \file 
+    \brief Main running file 
+*/
+
+#include "head.h"                              
 
 int main()
 {   
-    double coeffs[QUANTITY] = {};                   // array of coeffs
+    double coeffs[QUANTITY] = {};                 
 
-    filler_coeffs (coeffs);                          //initialization of coeffs
+    filler_coeffs (coeffs);                   
 
-    struct Roots solutions = {                      // initialization struct for form of solutions
+    struct Roots solutions = {                      
         UNDEFINED_SOL,
         NAN,
         NAN,
     };
 
-    int end = welcome ();                            //all connection in one fuction
-    if (end) return 0;
+    int end = welcome ();               
+    if (end) 
+    {
+        printf ("\n\033[1;%dmGOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n\033[1;%dm\n", MAGENTA, RESET);
+        return 0;
+    }
+    input_args (coeffs);                       
+    MYASSERT (check_double (coeffs[0]));            
+    MYASSERT (check_double (coeffs[1]));
+    MYASSERT (check_double (coeffs[2]));
 
-    input_args (coeffs);                             //enter all parametrs with security
+    quadratic_solver (&solutions, coeffs);        
 
-    MYASSERT(check_double (coeffs[0]));                //Checking for errors
-    MYASSERT(check_double (coeffs[1]));
-    MYASSERT(check_double (coeffs[2]));
-    
-    //3. Processing quadratic solver
+    int nSolutions = solutions.amount;          
 
-    quadratic_solver(&solutions, coeffs);            //call quadratic solver
+    MYASSERT (check_double (solutions.amount));      
+    MYASSERT (check_double (solutions.root1));
+    MYASSERT (check_double (solutions.root2));
 
-    int nSolutions = solutions.amount;              // initialization amount of solutions
-
-    MYASSERT(check_double (solutions.amount));         //Checking for errors
-    MYASSERT(check_double (solutions.root1));
-    MYASSERT(check_double (solutions.root2));
-
-    process_out (&solutions, nSolutions);            //call function of output
-
+    process_out (&solutions, nSolutions);      
+    printf ("\n\033[1;%dmGOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n\033[1;%dm\n", MAGENTA, RESET);
     return 0;
 }

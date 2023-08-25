@@ -1,6 +1,10 @@
+/*!
+    \file 
+    \brief Running file of calculating quadratic equation 
+*/
+
 #include "head.h"
 
-//7.
 void quadratic_solver (Roots *sols, double *args)
 {
     double x1 = NAN;
@@ -38,7 +42,6 @@ void quadratic_solver (Roots *sols, double *args)
 
 }
 
-//8.
 void linal_solver (Roots *sols, double *args)
 {
     double x1 = NAN;
