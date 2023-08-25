@@ -10,22 +10,22 @@ void process_out (Roots *sols, int counter)
     switch (counter)
     {
         case INF_SOL:
-            printf ("\033[1;%dmInfinity of solutions. a = b = c = 0\033[1;%dm\n", GREEN, RESET);
+            printf (GREEN "Infinity of solutions. a = b = c = 0\n" RESET);
             break;
 
         case ZERO_SOL:
-            printf ("\033[1;%dmNo solutions.\033[1;%dm\n", GREEN, RESET);
+            printf (GREEN "No solutions.\n" RESET);
             break;
 
         case ONE_SOL:
-            printf ("\033[1;%dmOne solution. x = %lf\033[1;%dm\n", GREEN, sols -> root1, RESET);
+            printf (GREEN "One solution. x = %lf\n" RESET, sols -> root1);
             break;
 
         case TWO_SOL:
-            printf ("\033[1;%dmTwo solutions.\nx1 = %lf\nx2 = %lf\033[1;%dm\n", GREEN, (*sols).root1, (*sols).root2, RESET);
+            printf (GREEN "Two solutions.\nx1 = %lf\nx2 = %lf\033[1;%dm\n" RESET, (*sols).root1, (*sols).root2);
             break;
 
         default:
-            printf ("\033[1;%dmERROR PROBLEMS IN LOGIC. YOUR LOGIC. CHECK UR BRAINS. AMOUNT NOT NORMAL\033[1;%dm\n",RED, RESET);
+            printf (RED "ERROR PROBLEMS IN LOGIC. YOUR LOGIC. CHECK UR BRAINS. AMOUNT NOT NORMAL\n" RESET);
     }
 }

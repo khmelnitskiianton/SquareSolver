@@ -1,14 +1,13 @@
 /*!
     \file 
     \brief Header file of output color
-    It includes codes for colores for escape sequences < \033[1;{code}m >
+    It includes macroses
 */
-enum colors {
-    RED     = 31,
-    GREEN   = 32,
-    YELLOW  = 33,
-    BLUE    = 34,
-    MAGENTA = 35,
-    CYAN    = 36,
-    RESET   = 0,
-};
+
+#define RED "\033[1;31m"
+#define GREEN "\033[1;32m"
+#define YELLOW "\033[1;33m"
+#define BLUE "\033[1;34m"
+#define MAGENTA "\033[1;35m"
+#define CYAN "\033[1;36m"
+#define RESET "\033[1;0m"

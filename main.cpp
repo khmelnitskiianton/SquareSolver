@@ -20,7 +20,7 @@ int main()
     int end = welcome ();               
     if (end) 
     {
-        printf ("\n\033[1;%dmGOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n\033[1;%dm\n", MAGENTA, RESET);
+        printf ("\n" MAGENTA "GOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n" RESET "\n");
         return 0;
     }
     input_args (coeffs);                       
@@ -37,6 +37,6 @@ int main()
     MYASSERT (check_double (solutions.root2));
 
     process_out (&solutions, nSolutions);      
-    printf ("\n\033[1;%dmGOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n\033[1;%dm\n", MAGENTA, RESET);
+    printf ("\n" MAGENTA "GOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n" RESET);
     return 0;
 }
