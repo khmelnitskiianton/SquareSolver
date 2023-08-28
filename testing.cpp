@@ -32,7 +32,7 @@ int test_solofile(int *n, double test_data[], int amount_cor)
     }
     else
     {
-        printf (GREEN "TEST %d WITH DATA: [a=%.1lf, b=%.1lf, c=%.1lf] IS OK!!!\n" RESET, GREEN, *n, parametrs[0], parametrs[1], parametrs[2]);
+        printf (GREEN "TEST %d WITH DATA: [a=%.1lf, b=%.1lf, c=%.1lf] IS OK!!!\n" RESET, *n, parametrs[0], parametrs[1], parametrs[2]);
     }
     return 1;    
 }
