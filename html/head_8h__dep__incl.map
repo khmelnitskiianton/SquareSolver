@@ -1,17 +1,10 @@
 <map id="head.h" name="head.h">
-<area shape="rect" id="Node000001" title="Header file of all header file." alt="" coords="312,5,373,31"/>
-<area shape="rect" id="Node000002" href="$comparing_8cpp.html" title="Running file of comparing double numbers." alt="" coords="5,79,112,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,33,105,81,104,76,298,28"/>
-<area shape="rect" id="Node000003" href="$file_8cpp.html" title="Running file of oppening txt file for reading." alt="" coords="137,79,199,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="303,38,198,81,196,76,301,33"/>
-<area shape="rect" id="Node000004" href="$in_8cpp.html" title="Running file of input and entering." alt="" coords="223,79,281,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="319,41,268,81,265,76,316,37"/>
-<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Main running file." alt="" coords="305,79,380,104"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="345,44,345,79,340,79,340,44"/>
-<area shape="rect" id="Node000006" href="$out_8cpp.html" title="Running file of output, and resulting." alt="" coords="405,79,470,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="370,37,423,76,420,81,367,41"/>
-<area shape="rect" id="Node000007" href="$solving_8cpp.html" title="Running file of calculating quadratic equation." alt="" coords="494,79,581,104"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="387,33,507,76,505,81,385,38"/>
-<area shape="rect" id="Node000008" href="$testing_8cpp.html" title="Running file of Unit tests from txt file." alt="" coords="605,79,691,104"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="387,27,605,77,604,82,386,32"/>
+<area shape="rect" id="node1" title="Header file of all header file." alt="" coords="312,5,373,32"/>
+<area shape="rect" id="node2" href="$comparing_8cpp.html" title="Running file of comparing double numbers." alt="" coords="5,80,112,107"/>
+<area shape="rect" id="node3" href="$file_8cpp.html" title="Running file of oppening txt file for reading." alt="" coords="137,80,199,107"/>
+<area shape="rect" id="node4" href="$in_8cpp.html" title="Running file of input and entering." alt="" coords="223,80,281,107"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Main running file." alt="" coords="305,80,380,107"/>
+<area shape="rect" id="node6" href="$out_8cpp.html" title="Running file of output, and resulting." alt="" coords="405,80,470,107"/>
+<area shape="rect" id="node7" href="$solving_8cpp.html" title="Running file of calculating quadratic equation." alt="" coords="494,80,581,107"/>
+<area shape="rect" id="node8" href="$testing_8cpp.html" title="Running file of Unit tests from txt file." alt="" coords="605,80,691,107"/>
 </map>

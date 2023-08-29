@@ -27,5 +27,6 @@ void process_out (Roots *sols, int counter)
 
         default:
             printf (RED "ERROR PROBLEMS IN LOGIC. YOUR LOGIC. CHECK UR BRAINS. AMOUNT NOT NORMAL\n" RESET);
+            MYASSERT (0)
     }
 }

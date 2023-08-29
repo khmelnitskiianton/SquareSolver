@@ -1,25 +1,26 @@
-\doxysection{testing.\+h File Reference}
-\hypertarget{testing_8h}{}\label{testing_8h}\index{testing.h@{testing.h}}
+\hypertarget{testing_8h}{}\doxysection{testing.\+h File Reference}
+\label{testing_8h}\index{testing.h@{testing.h}}
 
 
 Header file of Unit Testing.  
 
 
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{testing_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Functions}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{testing_8h_a8b677741d1263d076880eaf13705774a}{test\+\_\+solofile}} (int \texorpdfstring{$\ast$}{*}n, double test\+\_\+data\mbox{[}$\,$\mbox{]}, int amount\+\_\+cor)
+int \mbox{\hyperlink{testing_8h_a8b677741d1263d076880eaf13705774a}{test\+\_\+solofile}} (int $\ast$n, double test\+\_\+data\mbox{[}$\,$\mbox{]}, int amount\+\_\+cor)
 \begin{DoxyCompactList}\small\item\em Function of check one unit test. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{testing_8h_a9e0dc91f5284de3db19281646d00e105}{test\+\_\+allfile}} (void)
 \begin{DoxyCompactList}\small\item\em Function of process all unit tests from file. \end{DoxyCompactList}\item 
-FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{testing_8h_a1ac6c73cfa09ed66edc9b2f8b337316f}{fileopening}} (void)
+FILE $\ast$ \mbox{\hyperlink{testing_8h_a379f78a5c97331697ddd8238a7c815dc}{fileopening}} (void)
 \begin{DoxyCompactList}\small\item\em Function of opening file. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{testing_8h_a12405f46d723a5439d8b26c4db6a1e42}{nan\+\_\+file}} (char stroka\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Function of checking for NAN in file. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -31,11 +32,11 @@ Header file of Unit Testing.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{testing_8h_a1ac6c73cfa09ed66edc9b2f8b337316f}\label{testing_8h_a1ac6c73cfa09ed66edc9b2f8b337316f} 
+\mbox{\Hypertarget{testing_8h_a379f78a5c97331697ddd8238a7c815dc}\label{testing_8h_a379f78a5c97331697ddd8238a7c815dc}} 
 \index{testing.h@{testing.h}!fileopening@{fileopening}}
 \index{fileopening@{fileopening}!testing.h@{testing.h}}
 \doxysubsubsection{\texorpdfstring{fileopening()}{fileopening()}}
-{\footnotesize\ttfamily FILE \texorpdfstring{$\ast$}{*} fileopening (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILE$\ast$ fileopening (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -44,7 +45,7 @@ Function of opening file.
 \begin{DoxyReturn}{Returns}
 address of open file Open file and check for correct opening 
 \end{DoxyReturn}
-\Hypertarget{testing_8h_a12405f46d723a5439d8b26c4db6a1e42}\label{testing_8h_a12405f46d723a5439d8b26c4db6a1e42} 
+\mbox{\Hypertarget{testing_8h_a12405f46d723a5439d8b26c4db6a1e42}\label{testing_8h_a12405f46d723a5439d8b26c4db6a1e42}} 
 \index{testing.h@{testing.h}!nan\_file@{nan\_file}}
 \index{nan\_file@{nan\_file}!testing.h@{testing.h}}
 \doxysubsubsection{\texorpdfstring{nan\_file()}{nan\_file()}}
@@ -60,9 +61,9 @@ Function of checking for NAN in file.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-double number NAN or value It take string and check for \"{}\+NAN\"{}, and in dependence of result it can be NAN(we scan nan at the end) or standart double value 
+double number NAN or value It take string and check for \char`\"{}\+NAN\char`\"{}, and in dependence of result it can be NAN(we scan nan at the end) or standart double value 
 \end{DoxyReturn}
-\Hypertarget{testing_8h_a9e0dc91f5284de3db19281646d00e105}\label{testing_8h_a9e0dc91f5284de3db19281646d00e105} 
+\mbox{\Hypertarget{testing_8h_a9e0dc91f5284de3db19281646d00e105}\label{testing_8h_a9e0dc91f5284de3db19281646d00e105}} 
 \index{testing.h@{testing.h}!test\_allfile@{test\_allfile}}
 \index{test\_allfile@{test\_allfile}!testing.h@{testing.h}}
 \doxysubsubsection{\texorpdfstring{test\_allfile()}{test\_allfile()}}
@@ -80,13 +81,13 @@ Function of process all unit tests from file.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-amount of tests This function scaning file tests.\+txt and with call \doxylink{testing_8h_a8b677741d1263d076880eaf13705774a}{test\+\_\+solofile()} checking all lines in file 
+amount of tests This function scaning file tests.\+txt and with call \mbox{\hyperlink{testing_8h_a8b677741d1263d076880eaf13705774a}{test\+\_\+solofile()}} checking all lines in file 
 \end{DoxyReturn}
-\Hypertarget{testing_8h_a8b677741d1263d076880eaf13705774a}\label{testing_8h_a8b677741d1263d076880eaf13705774a} 
+\mbox{\Hypertarget{testing_8h_a8b677741d1263d076880eaf13705774a}\label{testing_8h_a8b677741d1263d076880eaf13705774a}} 
 \index{testing.h@{testing.h}!test\_solofile@{test\_solofile}}
 \index{test\_solofile@{test\_solofile}!testing.h@{testing.h}}
 \doxysubsubsection{\texorpdfstring{test\_solofile()}{test\_solofile()}}
-{\footnotesize\ttfamily int test\+\_\+solofile (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{n,  }\item[{double}]{test\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{int}]{amount\+\_\+cor }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int test\+\_\+solofile (\begin{DoxyParamCaption}\item[{int $\ast$}]{n,  }\item[{double}]{test\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{int}]{amount\+\_\+cor }\end{DoxyParamCaption})}
 
 
 

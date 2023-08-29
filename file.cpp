@@ -11,7 +11,7 @@ FILE * fileopening (void)
     if ((file_testing = fopen ("tests.txt", "r")) == NULL) //check for opening
     {
         printf (RED "!!! ERROR OF OPENING FILE !!!" RESET "\n");
-        MYASSERT(0);
+        MYASSERT(0)
     }
     return file_testing;
 }
