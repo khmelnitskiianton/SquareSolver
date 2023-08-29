@@ -37,7 +37,7 @@ void input_args (double *args)
 
 int welcome (void)
 {   
-    rtrtrt();
+    rtrtrt ();
     printf ("\n" MAGENTA "    QUADRATIC EQUATION SOLVER BY KHMELNITSKII ANTON SUMMER PROGRAMM CAMP 2023\n"
            "----------------------------------------------------------------------------------" RESET "\n");
     printf ("\n" CYAN "Enter arguments(numbers) of quadratic equation: ax^2 + bx + c = 0.\n"
@@ -86,9 +86,9 @@ int user_choice (void)
     return toupper (ch);
 }
 
-void rtrtrt(void)
+void rtrtrt (void)
 {                                                                                      
-printf( RED "                                                    ..::^^^::..                          .:^:.            \n"
+printf ( RED "                                                    ..::^^^::..                          .:^:.            \n"
 "                                                 :~7JY5PPPP5555555YJ7~:                .^!??!^.                       \n"
 "                                             .^?5PG5J7~^:.......::^!?JYY7^.        :~?5PY7^.                          \n"
 "                                           :?PGPJ~:.                  .:!?J!.  :!JGBGJ~.                              \n"
@@ -114,9 +114,9 @@ printf( RED "                                                    ..::^^^::..    
 "                                                   ..                                                                 \n\n" RESET);                                                                                                   
 }
 
-void mipt(void)
+void mipt (void)
 {                                                                                                                                            
-printf( BLUE "                     .                                                                                                                              \n"                                                                                  
+printf ( BLUE "                     .                                                                                                                              \n"                                                                                  
 "                  :?55Y~                                                                                                                                        \n"
 "                 ~PPJ?PP!                                                                                                                                       \n"
 "                ^PPY. JPP^                                                                                                                                      \n"
