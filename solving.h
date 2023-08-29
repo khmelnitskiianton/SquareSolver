@@ -29,6 +29,7 @@ struct Roots
     double root1;   
     double root2;    
 };
+
 /// \var int Roots::amount
 /// \brief The value of amount of roots, can be -1(infinity), 0, 1, 2, 3(for error)
 /// \var double Roots::root1

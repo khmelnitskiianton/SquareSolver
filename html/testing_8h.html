@@ -100,6 +100,7 @@ $(document).ready(function(){initNavTree('testing_8h.html',''); initResizable();
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">testing.h File Reference</div>  </div>
@@ -129,11 +130,17 @@ $(document).ready(function(){initNavTree('testing_8h.html',''); initResizable();
 </div>
 <p><a href="testing_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_test___arguments.html">Test_Arguments</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure of test line it use for one unit test data.  <a href="struct_test___arguments.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8b677741d1263d076880eaf13705774a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing_8h.html#a8b677741d1263d076880eaf13705774a">test_solofile</a> (int *n, double test_data[], int amount_cor)</td></tr>
-<tr class="memdesc:a8b677741d1263d076880eaf13705774a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function of check one unit test.  <a href="testing_8h.html#a8b677741d1263d076880eaf13705774a">More...</a><br /></td></tr>
-<tr class="separator:a8b677741d1263d076880eaf13705774a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0c6421c7ba039e810a47c975956946"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing_8h.html#a1e0c6421c7ba039e810a47c975956946">test_solofile</a> (int *n, <a class="el" href="struct_test___arguments.html">Test_Arguments</a> *test_data)</td></tr>
+<tr class="memdesc:a1e0c6421c7ba039e810a47c975956946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function of check one unit test.  <a href="testing_8h.html#a1e0c6421c7ba039e810a47c975956946">More...</a><br /></td></tr>
+<tr class="separator:a1e0c6421c7ba039e810a47c975956946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e0dc91f5284de3db19281646d00e105"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing_8h.html#a9e0dc91f5284de3db19281646d00e105">test_allfile</a> (void)</td></tr>
 <tr class="memdesc:a9e0dc91f5284de3db19281646d00e105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function of process all unit tests from file.  <a href="testing_8h.html#a9e0dc91f5284de3db19281646d00e105">More...</a><br /></td></tr>
 <tr class="separator:a9e0dc91f5284de3db19281646d00e105"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,12 +226,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>amount of tests This function scaning file tests.txt and with call <a class="el" href="testing_8h.html#a8b677741d1263d076880eaf13705774a" title="Function of check one unit test.">test_solofile()</a> checking all lines in file </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>amount of tests This function scaning file tests.txt and with call <a class="el" href="testing_8h.html#a1e0c6421c7ba039e810a47c975956946" title="Function of check one unit test.">test_solofile()</a> checking all lines in file </dd></dl>
 
 </div>
 </div>
-<a id="a8b677741d1263d076880eaf13705774a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b677741d1263d076880eaf13705774a">&#9670;&nbsp;</a></span>test_solofile()</h2>
+<a id="a1e0c6421c7ba039e810a47c975956946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e0c6421c7ba039e810a47c975956946">&#9670;&nbsp;</a></span>test_solofile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,14 +245,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>test_data</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>amount_cor</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_test___arguments.html">Test_Arguments</a> *&#160;</td>
+          <td class="paramname"><em>test_data</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -259,8 +260,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>counter of tests </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">test_data</td><td>array of coefficients and correct roots </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">amount_cor</td><td>amount of correct roots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">test_data</td><td>structure of coefficients and correct roots </td></tr>
   </table>
   </dd>
 </dl>

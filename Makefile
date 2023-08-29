@@ -37,3 +37,6 @@ clean:
 
 docs:
 	doxygen doxy_config
+
+run: 
+	D:/Study/C/SquareSolver/$(EXECUTABLE)

@@ -12,10 +12,15 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=350pt]{testing_8h__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_test___arguments}{Test\+\_\+\+Arguments}}
+\begin{DoxyCompactList}\small\item\em Structure of test line it use for one unit test data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{testing_8h_a8b677741d1263d076880eaf13705774a}{test\+\_\+solofile}} (int $\ast$n, double test\+\_\+data\mbox{[}$\,$\mbox{]}, int amount\+\_\+cor)
+int \mbox{\hyperlink{testing_8h_a1e0c6421c7ba039e810a47c975956946}{test\+\_\+solofile}} (int $\ast$n, \mbox{\hyperlink{struct_test___arguments}{Test\+\_\+\+Arguments}} $\ast$test\+\_\+data)
 \begin{DoxyCompactList}\small\item\em Function of check one unit test. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{testing_8h_a9e0dc91f5284de3db19281646d00e105}{test\+\_\+allfile}} (void)
 \begin{DoxyCompactList}\small\item\em Function of process all unit tests from file. \end{DoxyCompactList}\item 
@@ -80,13 +85,13 @@ Function of process all unit tests from file.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-amount of tests This function scaning file tests.\+txt and with call \mbox{\hyperlink{testing_8h_a8b677741d1263d076880eaf13705774a}{test\+\_\+solofile()}} checking all lines in file 
+amount of tests This function scaning file tests.\+txt and with call \mbox{\hyperlink{testing_8h_a1e0c6421c7ba039e810a47c975956946}{test\+\_\+solofile()}} checking all lines in file 
 \end{DoxyReturn}
-\mbox{\Hypertarget{testing_8h_a8b677741d1263d076880eaf13705774a}\label{testing_8h_a8b677741d1263d076880eaf13705774a}} 
+\mbox{\Hypertarget{testing_8h_a1e0c6421c7ba039e810a47c975956946}\label{testing_8h_a1e0c6421c7ba039e810a47c975956946}} 
 \index{testing.h@{testing.h}!test\_solofile@{test\_solofile}}
 \index{test\_solofile@{test\_solofile}!testing.h@{testing.h}}
 \doxysubsubsection{\texorpdfstring{test\_solofile()}{test\_solofile()}}
-{\footnotesize\ttfamily int test\+\_\+solofile (\begin{DoxyParamCaption}\item[{int $\ast$}]{n,  }\item[{double}]{test\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{int}]{amount\+\_\+cor }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int test\+\_\+solofile (\begin{DoxyParamCaption}\item[{int $\ast$}]{n,  }\item[{\mbox{\hyperlink{struct_test___arguments}{Test\+\_\+\+Arguments}} $\ast$}]{test\+\_\+data }\end{DoxyParamCaption})}
 
 
 
@@ -96,9 +101,7 @@ Function of check one unit test.
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em n} & counter of tests \\
 \hline
-\mbox{\texttt{ in}}  & {\em test\+\_\+data} & array of coefficients and correct roots \\
-\hline
-\mbox{\texttt{ in}}  & {\em amount\+\_\+cor} & amount of correct roots \\
+\mbox{\texttt{ in}}  & {\em test\+\_\+data} & structure of coefficients and correct roots \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

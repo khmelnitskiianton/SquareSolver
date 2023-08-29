@@ -4,15 +4,28 @@
 */
 
 /*!
+    \brief Structure of test line
+    it use for one unit test data
+*/
+struct Test_Arguments
+{
+    double a;
+    double b;
+    double c;
+    double x1_cor;
+    double x2_cor;
+    int amount_cor;
+};
+
+/*!
     \brief Function of check one unit test
     \param[in] n counter of tests
-    \param[in] test_data array of coefficients and correct roots
-    \param[in] amount_cor amount of correct roots
+    \param[in] test_data structure of coefficients and correct roots
     \return 1 for counter of tests 
     This function take parametrs of one unit test and check them for results of my solving function
     Result of unit test will be output in message
 */
-int test_solofile (int *n,double test_data[], int amount_cor);
+int test_solofile (int *n, Test_Arguments *test_data);
 
 /*!
     \brief Function of process all unit tests from file
@@ -37,3 +50,8 @@ FILE * fileopening (void);
     It take string and check for "NAN", and in dependence of result it can be NAN(we scan nan at the end) or standart double value
 */
 double nan_file (char stroka[]);
+
+/*!
+    \brief Structure of test line
+    it use for one unit test data
+*/

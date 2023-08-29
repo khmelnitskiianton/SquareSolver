@@ -104,17 +104,29 @@ $(document).ready(function(){initNavTree('testing_8h_source.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 <a href="testing_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">int</span> <a class="code" href="testing_8h.html#a8b677741d1263d076880eaf13705774a">test_solofile</a> (<span class="keywordtype">int</span> *n,<span class="keywordtype">double</span> test_data[], <span class="keywordtype">int</span> amount_cor);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> <a class="code" href="testing_8h.html#a9e0dc91f5284de3db19281646d00e105">test_allfile</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;FILE * <a class="code" href="testing_8h.html#a379f78a5c97331697ddd8238a7c815dc">fileopening</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">double</span> <a class="code" href="testing_8h.html#a12405f46d723a5439d8b26c4db6a1e42">nan_file</a> (<span class="keywordtype">char</span> stroka[]);</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_test___arguments.html">   10</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_test___arguments.html">Test_Arguments</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">double</span> a;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">double</span> b;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">double</span> c;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">double</span> x1_cor;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">double</span> x2_cor;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> amount_cor;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">int</span> <a class="code" href="testing_8h.html#a1e0c6421c7ba039e810a47c975956946">test_solofile</a> (<span class="keywordtype">int</span> *n, <a class="code" href="struct_test___arguments.html">Test_Arguments</a> *test_data);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">int</span> <a class="code" href="testing_8h.html#a9e0dc91f5284de3db19281646d00e105">test_allfile</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;FILE * <a class="code" href="testing_8h.html#a379f78a5c97331697ddd8238a7c815dc">fileopening</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">double</span> <a class="code" href="testing_8h.html#a12405f46d723a5439d8b26c4db6a1e42">nan_file</a> (<span class="keywordtype">char</span> stroka[]);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="ttc" id="astruct_test___arguments_html"><div class="ttname"><a href="struct_test___arguments.html">Test_Arguments</a></div><div class="ttdoc">Structure of test line it use for one unit test data.</div><div class="ttdef"><b>Definition:</b> testing.h:11</div></div>
 <div class="ttc" id="atesting_8h_html_a12405f46d723a5439d8b26c4db6a1e42"><div class="ttname"><a href="testing_8h.html#a12405f46d723a5439d8b26c4db6a1e42">nan_file</a></div><div class="ttdeci">double nan_file(char stroka[])</div><div class="ttdoc">Function of checking for NAN in file.</div><div class="ttdef"><b>Definition:</b> testing.cpp:69</div></div>
+<div class="ttc" id="atesting_8h_html_a1e0c6421c7ba039e810a47c975956946"><div class="ttname"><a href="testing_8h.html#a1e0c6421c7ba039e810a47c975956946">test_solofile</a></div><div class="ttdeci">int test_solofile(int *n, Test_Arguments *test_data)</div><div class="ttdoc">Function of check one unit test.</div><div class="ttdef"><b>Definition:</b> testing.cpp:8</div></div>
 <div class="ttc" id="atesting_8h_html_a379f78a5c97331697ddd8238a7c815dc"><div class="ttname"><a href="testing_8h.html#a379f78a5c97331697ddd8238a7c815dc">fileopening</a></div><div class="ttdeci">FILE * fileopening(void)</div><div class="ttdoc">Function of opening file.</div><div class="ttdef"><b>Definition:</b> file.cpp:8</div></div>
-<div class="ttc" id="atesting_8h_html_a8b677741d1263d076880eaf13705774a"><div class="ttname"><a href="testing_8h.html#a8b677741d1263d076880eaf13705774a">test_solofile</a></div><div class="ttdeci">int test_solofile(int *n, double test_data[], int amount_cor)</div><div class="ttdoc">Function of check one unit test.</div><div class="ttdef"><b>Definition:</b> testing.cpp:8</div></div>
-<div class="ttc" id="atesting_8h_html_a9e0dc91f5284de3db19281646d00e105"><div class="ttname"><a href="testing_8h.html#a9e0dc91f5284de3db19281646d00e105">test_allfile</a></div><div class="ttdeci">int test_allfile(void)</div><div class="ttdoc">Function of process all unit tests from file.</div><div class="ttdef"><b>Definition:</b> testing.cpp:40</div></div>
+<div class="ttc" id="atesting_8h_html_a9e0dc91f5284de3db19281646d00e105"><div class="ttname"><a href="testing_8h.html#a9e0dc91f5284de3db19281646d00e105">test_allfile</a></div><div class="ttdeci">int test_allfile(void)</div><div class="ttdoc">Function of process all unit tests from file.</div><div class="ttdef"><b>Definition:</b> testing.cpp:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
