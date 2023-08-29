@@ -7,7 +7,7 @@
 
 int test_solofile(int *n, double test_data[], int amount_cor)
 {   
-    MYASSERT (n != NULL);
+    MYASSERT(n != NULL);
     double a = test_data[0];
     double b = test_data[1];
     double c = test_data[2];

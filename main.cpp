@@ -23,18 +23,19 @@ int main()
         printf ("\n" MAGENTA "GOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n" RESET "\n");
         return 0;
     }
-    input_args (coeffs);                       
-    MYASSERT (check_double (coeffs[0]))            
-    MYASSERT (check_double (coeffs[1]))
-    MYASSERT (check_double (coeffs[2]))
+    input_args (coeffs);
+
+    MYASSERT(check_double (coeffs[0]));           
+    MYASSERT(check_double (coeffs[1]));
+    MYASSERT(check_double (coeffs[2]));
 
     quadratic_solver (&solutions, coeffs);        
 
     int nSolutions = solutions.amount;          
 
-    MYASSERT (check_double (solutions.amount))     
-    MYASSERT (check_double (solutions.root1))
-    MYASSERT (check_double (solutions.root2))
+    MYASSERT(check_double (solutions.amount));  
+    MYASSERT(check_double (solutions.root1));
+    MYASSERT(check_double (solutions.root2));
 
     process_out (&solutions, nSolutions);      
     printf ("\n" MAGENTA "GOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n" RESET);

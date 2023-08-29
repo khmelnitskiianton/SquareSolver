@@ -10,4 +10,4 @@
     \param counter amount of roots
     In dependence of amount, it outputting diffrent messages
 */
-void process_out (Roots *sols, int counter);
+int process_out (Roots *sols, int counter);

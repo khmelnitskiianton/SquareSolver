@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('myassert_8h.html',''); initResizable()
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a515a61f25f23417277b04f9122e6961c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="myassert_8h.html#a515a61f25f23417277b04f9122e6961c">MYASSERT</a>(condition)&#160;&#160;&#160;if (!(condition)) printf (RED &quot;ERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s , LINE %d\n&quot; RESET, __FILE__, __PRETTY_FUNCTION__, __LINE__)</td></tr>
+<tr class="memitem:a515a61f25f23417277b04f9122e6961c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="myassert_8h.html#a515a61f25f23417277b04f9122e6961c">MYASSERT</a>(condition)</td></tr>
 <tr class="separator:a515a61f25f23417277b04f9122e6961c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -148,11 +148,18 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">condition</td><td>)</td>
-          <td>&#160;&#160;&#160;if (!(condition)) printf (RED &quot;ERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s , LINE %d\n&quot; RESET, __FILE__, __PRETTY_FUNCTION__, __LINE__)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Like assert() this macros call if error, but it don't stop all programm. Only message of error </p>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                                                                                                                         \</div>
+<div class="line">        if (!(condition))                                                                                                                        \</div>
+<div class="line">        {                                                                                                                                        \</div>
+<div class="line">            printf (RED <span class="stringliteral">&quot;ERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s , LINE %d\n&quot;</span> RESET, __FILE__, __PRETTY_FUNCTION__, __LINE__); \</div>
+<div class="line">            assert(0);                                                                                                                           \</div>
+<div class="line">        }                                                                                                                                        \</div>
+<div class="line">    } <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment --><p>Like assert() this macros call if error, but it don't stop all programm. Only message of error </p>
 
 </div>
 </div>

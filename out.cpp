@@ -5,7 +5,7 @@
 
 #include "head.h"
 
-void process_out (Roots *sols, int counter)
+int process_out (Roots *sols, int counter)
 {
     switch (counter)
     {
@@ -27,6 +27,6 @@ void process_out (Roots *sols, int counter)
 
         default:
             printf (RED "ERROR PROBLEMS IN LOGIC. YOUR LOGIC. CHECK UR BRAINS. AMOUNT NOT NORMAL\n" RESET);
-            MYASSERT (0)
+            MYASSERT(0);
     }
 }

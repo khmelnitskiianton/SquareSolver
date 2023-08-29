@@ -104,7 +104,15 @@ $(document).ready(function(){initNavTree('myassert_8h_source.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a href="myassert_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="myassert_8h.html#a515a61f25f23417277b04f9122e6961c">    7</a></span>&#160;<span class="preprocessor">#define MYASSERT(condition) if (!(condition)) printf (RED &quot;ERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s , LINE %d\n&quot;</span> RESET, __FILE__, __PRETTY_FUNCTION__, __LINE__)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="myassert_8h.html#a515a61f25f23417277b04f9122e6961c">    7</a></span>&#160;<span class="preprocessor">#define MYASSERT(condition)                                                                                                              \</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">    do {                                                                                                                                         \</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">        if (!(condition))                                                                                                                        \</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">        {                                                                                                                                        \</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">            printf (RED &quot;ERROR!!! YOU HAVE SOME PIZDEC IN FILE %s , IN FUNCTION %s , LINE %d\n&quot;</span> RESET, __FILE__, __PRETTY_FUNCTION__, __LINE__); \</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            assert(0);                                                                                                                           \</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        }                                                                                                                                        \</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    } while(0)                                                                                                                                   </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

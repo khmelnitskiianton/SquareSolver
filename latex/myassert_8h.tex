@@ -5,8 +5,7 @@
 Header file for myassert.  
 
 
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,7 +15,7 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{myassert_8h_a515a61f25f23417277b04f9122e6961c}{MYASSERT}}(condition)~if (!(condition)) printf (RED \char`\"{}ERROR!!! YOU HAVE SOME PIZDEC IN FILE \%s , IN FUNCTION \%s , LINE \%d\textbackslash{}n\char`\"{} RESET, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+PRETTY\+\_\+\+FUNCTION\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)
+\#define \mbox{\hyperlink{myassert_8h_a515a61f25f23417277b04f9122e6961c}{MYASSERT}}(condition)
 \end{DoxyCompactItemize}
 
 
@@ -30,6 +29,17 @@ Header file for myassert.
 \index{myassert.h@{myassert.h}!MYASSERT@{MYASSERT}}
 \index{MYASSERT@{MYASSERT}!myassert.h@{myassert.h}}
 \doxysubsubsection{\texorpdfstring{MYASSERT}{MYASSERT}}
-{\footnotesize\ttfamily \#define MYASSERT(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})~if (!(condition)) printf (RED \char`\"{}ERROR!!! YOU HAVE SOME PIZDEC IN FILE \%s , IN FUNCTION \%s , LINE \%d\textbackslash{}n\char`\"{} RESET, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+PRETTY\+\_\+\+FUNCTION\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)}
+{\footnotesize\ttfamily \#define MYASSERT(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{                                                                                                                                         \(\backslash\)}
+\DoxyCodeLine{        if (!(condition))                                                                                                                        \(\backslash\)}
+\DoxyCodeLine{        \{                                                                                                                                        \(\backslash\)}
+\DoxyCodeLine{            printf (RED \textcolor{stringliteral}{"{}ERROR!!! YOU HAVE SOME PIZDEC IN FILE \%s , IN FUNCTION \%s , LINE \%d\(\backslash\)n"{}} RESET, \_\_FILE\_\_, \_\_PRETTY\_FUNCTION\_\_, \_\_LINE\_\_); \(\backslash\)}
+\DoxyCodeLine{            assert(0);                                                                                                                           \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                                                                        \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
 Like assert() this macros call if error, but it don\textquotesingle{}t stop all programm. Only message of error 
