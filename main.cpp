@@ -21,6 +21,7 @@ int main()
     if (end) 
     {
         printf ("\n" MAGENTA "GOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n" RESET "\n");
+        mipt();
         return 0;
     }
     input_args (coeffs);
@@ -39,5 +40,6 @@ int main()
 
     process_out (&solutions, nSolutions);      
     printf ("\n" MAGENTA "GOODBYE FRIEND!!! OPEN ME ONE MORE TIME!\n" RESET);
+    mipt();
     return 0;
 }

@@ -46,3 +46,13 @@ void filler_coeffs (double *args);
     This function take Y or N from user - choice, if user write something else, he will swear 
 */
 int user_choice (void);
+
+/*!
+    \brief Function of posting foto of my unifersity logo MIPT RT
+*/
+void rtrtrt(void);
+
+/*!
+    \brief Function of posting foto of my unifersity logo MIPT 
+*/
+void mipt(void);
