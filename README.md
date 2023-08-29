@@ -6,7 +6,7 @@ This program solves qudratic equation.
 This program has Makefile, Doxygen, Unit Tests and beauty interface!
 
 1) If you want to start program, open terminal, open folder of project in it with [cd].
-2) With MakeFiles: enter command <br />    [make start] you compile project with .o object files.<br />    [make clean] will delete .o files (object).<br />    [make docs] it will compile doxygen documentation.<br />
+2) With MakeFiles: enter command <br />    [make start] you compile project with .o object files.<br />    [make clean] will delete .o files (object).<br />    [make run] to run file<br />   [make docs] it will compile doxygen documentation.<br />
    
 3) If you want to read documentation, open SquareSolver/html/index.html. In this website all information about program.
 
