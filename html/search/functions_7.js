@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quadratic_5fsolver_70',['quadratic_solver',['../solving_8cpp.html#a127058c8e4c6ff2a1aa54a70203a2559',1,'quadratic_solver(Roots *sols, double *args):&#160;solving.cpp'],['../solving_8h.html#a127058c8e4c6ff2a1aa54a70203a2559',1,'quadratic_solver(Roots *sols, double *args):&#160;solving.cpp']]]
+  ['process_5fout_72',['process_out',['../out_8cpp.html#a8081bd28b9e1e921a986dced262cf248',1,'process_out(Roots *sols, int counter):&#160;out.cpp'],['../out_8h.html#a8081bd28b9e1e921a986dced262cf248',1,'process_out(Roots *sols, int counter):&#160;out.cpp']]]
 ];

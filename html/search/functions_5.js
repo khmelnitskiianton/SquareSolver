@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nan_5ffile_68',['nan_file',['../testing_8cpp.html#a12405f46d723a5439d8b26c4db6a1e42',1,'nan_file(char stroka[]):&#160;testing.cpp'],['../testing_8h.html#a12405f46d723a5439d8b26c4db6a1e42',1,'nan_file(char stroka[]):&#160;testing.cpp']]]
+  ['mipt_70',['mipt',['../in_8cpp.html#ae50430f05154a1fca9809c1b20edb07f',1,'mipt(void):&#160;in.cpp'],['../in_8h.html#ae50430f05154a1fca9809c1b20edb07f',1,'mipt(void):&#160;in.cpp']]]
 ];

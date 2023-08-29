@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['process_5fout_69',['process_out',['../out_8cpp.html#a8081bd28b9e1e921a986dced262cf248',1,'process_out(Roots *sols, int counter):&#160;out.cpp'],['../out_8h.html#a8081bd28b9e1e921a986dced262cf248',1,'process_out(Roots *sols, int counter):&#160;out.cpp']]]
+  ['nan_5ffile_71',['nan_file',['../testing_8cpp.html#a12405f46d723a5439d8b26c4db6a1e42',1,'nan_file(char stroka[]):&#160;testing.cpp'],['../testing_8h.html#a12405f46d723a5439d8b26c4db6a1e42',1,'nan_file(char stroka[]):&#160;testing.cpp']]]
 ];
